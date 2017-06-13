@@ -32,6 +32,8 @@ public class Usuario{
 	@Id
 	private String username;
 	
+	private String nombre;
+	
 	private String apellido;
 	
 	private String correo;
@@ -81,6 +83,21 @@ public class Usuario{
 	private Amigos amigos;
 	
 	private Amigos seguidores;
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public Usuario setNombre(String nombre) {
+		this.nombre = nombre;
+		return this;
+	}
 
 	/**
 	 * @return the username
