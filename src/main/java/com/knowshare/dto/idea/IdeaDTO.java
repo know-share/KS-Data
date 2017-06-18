@@ -1,36 +1,29 @@
 /**
  * 
  */
-package com.knowshare.entities.idea;
+package com.knowshare.dto.idea;
 
 import java.util.Date;
 import java.util.List;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.knowshare.entities.idea.Idea;
+import com.knowshare.entities.idea.Tag;
 import com.knowshare.entities.perfilusuario.Usuario;
 import com.knowshare.enums.TipoIdeaEnum;
 
 /**
- * Representa una idea con su diferente informacion, el id
- * es el que mongo autogenera.
- * @author miguel
+ * @author pablo
  *
  */
-@Document(collection="idea")
-public class Idea {
-
-	@Id
+public class IdeaDTO {
+	
 	private ObjectId id;
 	
 	private String contenido;
 	
 	private String estado;
-	
-	private Date fechaCreacion;
 	
 	private String lugarEscritura;
 	
@@ -41,22 +34,18 @@ public class Idea {
 	private String alcance;
 	
 	private String problematica;
-	
-	@DBRef(lazy=true)
+
 	private List<Idea> ideasProyecto;
 	
-	@DBRef
 	private Usuario usuario;
 	
 	private Long lights;
 	
 	private Long comentarios;
 	
-	private List<OperacionIdea> operaciones;
-	
-	@DBRef
 	private List<Tag> tags;
 
+	
 	/**
 	 * @return the id
 	 */
@@ -67,9 +56,8 @@ public class Idea {
 	/**
 	 * @param id the id to set
 	 */
-	public Idea setId(ObjectId id) {
+	public void setId(ObjectId id) {
 		this.id = id;
-		return this;
 	}
 
 	/**
@@ -82,9 +70,8 @@ public class Idea {
 	/**
 	 * @param contenido the contenido to set
 	 */
-	public Idea setContenido(String contenido) {
+	public void setContenido(String contenido) {
 		this.contenido = contenido;
-		return this;
 	}
 
 	/**
@@ -97,24 +84,8 @@ public class Idea {
 	/**
 	 * @param estado the estado to set
 	 */
-	public Idea setEstado(String estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
-		return this;
-	}
-
-	/**
-	 * @return the fechaCreacion
-	 */
-	public Date getFechaCreacion() {
-		return fechaCreacion;
-	}
-
-	/**
-	 * @param fechaCreacion the fechaCreacion to set
-	 */
-	public Idea setFechaCreacion(Date fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-		return this;
 	}
 
 	/**
@@ -127,9 +98,8 @@ public class Idea {
 	/**
 	 * @param lugarEscritura the lugarEscritura to set
 	 */
-	public Idea setLugarEscritura(String lugarEscritura) {
+	public void setLugarEscritura(String lugarEscritura) {
 		this.lugarEscritura = lugarEscritura;
-		return this;
 	}
 
 	/**
@@ -142,9 +112,8 @@ public class Idea {
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public Idea setTipo(TipoIdeaEnum tipo) {
+	public void setTipo(TipoIdeaEnum tipo) {
 		this.tipo = tipo;
-		return this;
 	}
 
 	/**
@@ -157,9 +126,8 @@ public class Idea {
 	/**
 	 * @param numeroEstudiantes the numeroEstudiantes to set
 	 */
-	public Idea setNumeroEstudiantes(Integer numeroEstudiantes) {
+	public void setNumeroEstudiantes(Integer numeroEstudiantes) {
 		this.numeroEstudiantes = numeroEstudiantes;
-		return this;
 	}
 
 	/**
@@ -172,9 +140,8 @@ public class Idea {
 	/**
 	 * @param alcance the alcance to set
 	 */
-	public Idea setAlcance(String alcance) {
+	public void setAlcance(String alcance) {
 		this.alcance = alcance;
-		return this;
 	}
 
 	/**
@@ -187,9 +154,8 @@ public class Idea {
 	/**
 	 * @param problematica the problematica to set
 	 */
-	public Idea setProblematica(String problematica) {
+	public void setProblematica(String problematica) {
 		this.problematica = problematica;
-		return this;
 	}
 
 	/**
@@ -202,9 +168,8 @@ public class Idea {
 	/**
 	 * @param ideasProyecto the ideasProyecto to set
 	 */
-	public Idea setIdeasProyecto(List<Idea> ideasProyecto) {
+	public void setIdeasProyecto(List<Idea> ideasProyecto) {
 		this.ideasProyecto = ideasProyecto;
-		return this;
 	}
 
 	/**
@@ -217,9 +182,8 @@ public class Idea {
 	/**
 	 * @param usuario the usuario to set
 	 */
-	public Idea setUsuario(Usuario usuario) {
+	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-		return this;
 	}
 
 	/**
@@ -232,9 +196,8 @@ public class Idea {
 	/**
 	 * @param lights the lights to set
 	 */
-	public Idea setLights(Long lights) {
+	public void setLights(Long lights) {
 		this.lights = lights;
-		return this;
 	}
 
 	/**
@@ -247,24 +210,8 @@ public class Idea {
 	/**
 	 * @param comentarios the comentarios to set
 	 */
-	public Idea setComentarios(Long comentarios) {
+	public void setComentarios(Long comentarios) {
 		this.comentarios = comentarios;
-		return this;
-	}
-
-	/**
-	 * @return the operaciones
-	 */
-	public List<OperacionIdea> getOperaciones() {
-		return operaciones;
-	}
-
-	/**
-	 * @param operaciones the operaciones to set
-	 */
-	public Idea setOperaciones(List<OperacionIdea> operaciones) {
-		this.operaciones = operaciones;
-		return this;
 	}
 
 	/**
@@ -277,8 +224,10 @@ public class Idea {
 	/**
 	 * @param tags the tags to set
 	 */
-	public Idea setTags(List<Tag> tags) {
+	public void setTags(List<Tag> tags) {
 		this.tags = tags;
-		return this;
 	}
+	
+	
+
 }
