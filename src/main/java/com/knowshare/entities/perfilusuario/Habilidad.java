@@ -3,10 +3,11 @@
  */
 package com.knowshare.entities.perfilusuario;
 
-import java.io.Serializable;
-
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.knowshare.enums.TipoHabilidadEnum;
 
 /**
  * Habilidades que un usuario puede tener dentro de la aplicacion para
@@ -15,12 +16,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection = "habilidad")
-public class Habilidad implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class Habilidad{
 	
 	@Id
+	private ObjectId id;
+	
 	private String nombre;
+	
+	private TipoHabilidadEnum tipo;
+
+	/**
+	 * @return the id
+	 */
+	public ObjectId getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public Habilidad setId(ObjectId id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre
@@ -34,6 +52,21 @@ public class Habilidad implements Serializable {
 	 */
 	public Habilidad setNombre(String nombre) {
 		this.nombre = nombre;
+		return this;
+	}
+
+	/**
+	 * @return the tipo
+	 */
+	public TipoHabilidadEnum getTipo() {
+		return tipo;
+	}
+
+	/**
+	 * @param tipo the tipo to set
+	 */
+	public Habilidad setTipo(TipoHabilidadEnum tipo) {
+		this.tipo = tipo;
 		return this;
 	}
 }

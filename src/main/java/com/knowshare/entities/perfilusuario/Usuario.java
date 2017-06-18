@@ -83,6 +83,9 @@ public class Usuario{
 	private Amigos amigos;
 	
 	private Amigos seguidores;
+	
+	@DBRef
+	private Personalidad personalidad;
 
 	/**
 	 * @return the nombre
@@ -441,6 +444,21 @@ public class Usuario{
 	 */
 	public Usuario setSeguidores(Amigos seguidores) {
 		this.seguidores = seguidores;
+		return this;
+	}
+
+	/**
+	 * @return the personalidad
+	 */
+	public Personalidad getPersonalidad() {
+		return personalidad;
+	}
+
+	/**
+	 * @param personalidad the personalidad to set
+	 */
+	public Usuario setPersonalidad(Personalidad personalidad) {
+		this.personalidad = personalidad;
 		return this;
 	}
 }
