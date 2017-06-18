@@ -11,7 +11,6 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.knowshare.entities.academia.Carrera;
-import com.knowshare.entities.academia.Enfasis;
 import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.ludificacion.CualidadAval;
@@ -66,8 +65,7 @@ public class Usuario{
 	@DBRef
 	private List<Carrera> carreras;
 	
-	@DBRef
-	private List<Enfasis> enfasis;
+	private List<String> enfasis;
 	
 	private List<CualidadAval> cualidades;
 	
@@ -345,14 +343,14 @@ public class Usuario{
 	/**
 	 * @return the enfasis
 	 */
-	public List<Enfasis> getEnfasis() {
+	public List<String> getEnfasis() {
 		return enfasis;
 	}
 
 	/**
 	 * @param enfasis the enfasis to set
 	 */
-	public Usuario setEnfasis(List<Enfasis> enfasis) {
+	public Usuario setEnfasis(List<String> enfasis) {
 		this.enfasis = enfasis;
 		return this;
 	}

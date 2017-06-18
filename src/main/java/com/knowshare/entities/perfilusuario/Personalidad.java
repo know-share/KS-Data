@@ -3,6 +3,8 @@
  */
 package com.knowshare.entities.perfilusuario;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,7 +13,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection = "personalidad")
-public class Personalidad {
+public class Personalidad implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private String nombre;

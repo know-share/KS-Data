@@ -5,8 +5,10 @@ package com.knowshare.entities.perfilusuario;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.knowshare.entities.academia.Carrera;
 import com.knowshare.enums.TipoHabilidadEnum;
 
 /**
@@ -24,6 +26,9 @@ public class Habilidad{
 	private String nombre;
 	
 	private TipoHabilidadEnum tipo;
+	
+	@DBRef
+	private Carrera carrera;
 
 	/**
 	 * @return the id
@@ -67,6 +72,21 @@ public class Habilidad{
 	 */
 	public Habilidad setTipo(TipoHabilidadEnum tipo) {
 		this.tipo = tipo;
+		return this;
+	}
+
+	/**
+	 * @return the carrera
+	 */
+	public Carrera getCarrera() {
+		return carrera;
+	}
+
+	/**
+	 * @param carrera the carrera to set
+	 */
+	public Habilidad setCarrera(Carrera carrera) {
+		this.carrera = carrera;
 		return this;
 	}
 }
