@@ -26,6 +26,8 @@ public class Carrera {
 	private List<Carrera> carrerasAfines;
 	
 	private List<String> enfasis;
+	
+	private List<String> areaConocimiento;
 
 	/**
 	 * @return the nombre
@@ -84,6 +86,21 @@ public class Carrera {
 	 */
 	public Carrera setEnfasis(List<String> enfasis) {
 		this.enfasis = enfasis;
+		return this;
+	}
+
+	/**
+	 * @return the areaConocimiento
+	 */
+	public List<String> getAreaConocimiento() {
+		return areaConocimiento;
+	}
+
+	/**
+	 * @param areaConocimiento the areaConocimiento to set
+	 */
+	public Carrera setAreaConocimiento(List<String> areaConocimiento) {
+		this.areaConocimiento = areaConocimiento;
 		return this;
 	}
 }
