@@ -67,7 +67,7 @@ public class Usuario{
 	
 	private List<String> enfasis;
 	
-	private List<CualidadAval> cualidades;
+	private List<CualidadAval> cualidadesProfesor;
 	
 	@DBRef
 	private List<Insignia> insignias;
@@ -358,15 +358,15 @@ public class Usuario{
 	/**
 	 * @return the cualidades
 	 */
-	public List<CualidadAval> getCualidades() {
-		return cualidades;
+	public List<CualidadAval> getCualidadesProfesor() {
+		return cualidadesProfesor;
 	}
 
 	/**
 	 * @param cualidades the cualidades to set
 	 */
-	public Usuario setCualidades(List<CualidadAval> cualidades) {
-		this.cualidades = cualidades;
+	public Usuario setCualidadesProfesor(List<CualidadAval> cualidadesProfesor) {
+		this.cualidadesProfesor = cualidadesProfesor;
 		return this;
 	}
 

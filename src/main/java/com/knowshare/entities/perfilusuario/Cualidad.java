@@ -5,6 +5,7 @@ package com.knowshare.entities.perfilusuario;
 
 import java.io.Serializable;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -22,9 +23,26 @@ public class Cualidad implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	private ObjectId id;
+	
 	private String nombre;
 	
 	private TipoCualidadEnum tipo;
+
+	/**
+	 * @return the id
+	 */
+	public ObjectId getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public Cualidad setId(ObjectId id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre
