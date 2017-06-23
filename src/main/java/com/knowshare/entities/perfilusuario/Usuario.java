@@ -6,13 +6,17 @@ package com.knowshare.entities.perfilusuario;
 import java.util.Date;
 import java.util.List;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.knowshare.entities.academia.AreaConocimiento;
 import com.knowshare.entities.academia.Carrera;
 import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
+import com.knowshare.entities.app.PreferenciasUsuario;
 import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.entities.ludificacion.Insignia;
@@ -29,12 +33,16 @@ import com.knowshare.enums.TipoUsuariosEnum;
 public class Usuario{
 
 	@Id
+	private ObjectId id;
+	
+	@Indexed(unique=true)
 	private String username;
 	
 	private String nombre;
 	
 	private String apellido;
 	
+	@Indexed(unique=true)
 	private String correo;
 	
 	private Date fechaNacimiento;
@@ -46,8 +54,6 @@ public class Usuario{
 	private TipoProfesorEnum tipoProfesor;
 	
 	private String disponibilidad;
-	
-	private Integer periodoTG;
 	
 	private String estado;
 	
@@ -62,10 +68,15 @@ public class Usuario{
 	
 	private List<UsuarioAval> personasAvaladas;
 	
+	
 	@DBRef
+	// A lo mucho 2 carreras
 	private List<Carrera> carreras;
 	
-	private List<String> enfasis;
+	// A lo mucho habrán 4 énfasis
+	private List<Enfasis> enfasis;
+	
+	private List<AreaConocimiento> areasConocimiento;
 	
 	private List<CualidadAval> cualidadesProfesor;
 	
@@ -84,6 +95,23 @@ public class Usuario{
 	
 	@DBRef
 	private Personalidad personalidad;
+	
+	private PreferenciasUsuario preferencias;
+
+	/**
+	 * @return the id
+	 */
+	public ObjectId getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public Usuario setId(ObjectId id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre
@@ -221,21 +249,6 @@ public class Usuario{
 	}
 
 	/**
-	 * @return the periodoTG
-	 */
-	public Integer getPeriodoTG() {
-		return periodoTG;
-	}
-
-	/**
-	 * @param periodoTG the periodoTG to set
-	 */
-	public Usuario setPeriodoTG(Integer periodoTG) {
-		this.periodoTG = periodoTG;
-		return this;
-	}
-
-	/**
 	 * @return the estado
 	 */
 	public String getEstado() {
@@ -343,14 +356,14 @@ public class Usuario{
 	/**
 	 * @return the enfasis
 	 */
-	public List<String> getEnfasis() {
+	public List<Enfasis> getEnfasis() {
 		return enfasis;
 	}
 
 	/**
 	 * @param enfasis the enfasis to set
 	 */
-	public Usuario setEnfasis(List<String> enfasis) {
+	public Usuario setEnfasis(List<Enfasis> enfasis) {
 		this.enfasis = enfasis;
 		return this;
 	}
@@ -457,6 +470,36 @@ public class Usuario{
 	 */
 	public Usuario setPersonalidad(Personalidad personalidad) {
 		this.personalidad = personalidad;
+		return this;
+	}
+
+	/**
+	 * @return the preferencias
+	 */
+	public PreferenciasUsuario getPreferencias() {
+		return preferencias;
+	}
+
+	/**
+	 * @param preferencias the preferencias to set
+	 */
+	public Usuario setPreferencias(PreferenciasUsuario preferencias) {
+		this.preferencias = preferencias;
+		return this;
+	}
+
+	/**
+	 * @return the areasConocimiento
+	 */
+	public List<AreaConocimiento> getAreasConocimiento() {
+		return areasConocimiento;
+	}
+
+	/**
+	 * @param areasConocimiento the areasConocimiento to set
+	 */
+	public Usuario setAreasConocimiento(List<AreaConocimiento> areasConocimiento) {
+		this.areasConocimiento = areasConocimiento;
 		return this;
 	}
 }

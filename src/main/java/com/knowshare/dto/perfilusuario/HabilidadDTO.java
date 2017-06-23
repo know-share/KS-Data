@@ -25,6 +25,8 @@ public class HabilidadDTO implements Serializable{
 	private String nombre;
 	
 	private TipoHabilidadEnum tipo;
+	
+	private String carrera;
 
 	/**
 	 * @return the id
@@ -68,6 +70,21 @@ public class HabilidadDTO implements Serializable{
 	 */
 	public HabilidadDTO setTipo(TipoHabilidadEnum tipo) {
 		this.tipo = tipo;
+		return this;
+	}
+
+	/**
+	 * @return the carrera
+	 */
+	public String getCarrera() {
+		return carrera;
+	}
+
+	/**
+	 * @param carrera the carrera to set
+	 */
+	public HabilidadDTO setCarrera(String carrera) {
+		this.carrera = carrera;
 		return this;
 	}
 }
