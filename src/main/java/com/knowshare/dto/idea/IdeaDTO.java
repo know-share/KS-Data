@@ -3,7 +3,6 @@
  */
 package com.knowshare.dto.idea;
 
-import java.util.Date;
 import java.util.List;
 
 import org.bson.types.ObjectId;
@@ -56,8 +55,9 @@ public class IdeaDTO {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(ObjectId id) {
+	public IdeaDTO setId(ObjectId id) {
 		this.id = id;
+		return this;
 	}
 
 	/**
@@ -70,8 +70,9 @@ public class IdeaDTO {
 	/**
 	 * @param contenido the contenido to set
 	 */
-	public void setContenido(String contenido) {
+	public IdeaDTO setContenido(String contenido) {
 		this.contenido = contenido;
+		return this;
 	}
 
 	/**
@@ -84,8 +85,9 @@ public class IdeaDTO {
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(String estado) {
+	public IdeaDTO setEstado(String estado) {
 		this.estado = estado;
+		return this;
 	}
 
 	/**
@@ -98,8 +100,9 @@ public class IdeaDTO {
 	/**
 	 * @param lugarEscritura the lugarEscritura to set
 	 */
-	public void setLugarEscritura(String lugarEscritura) {
+	public IdeaDTO setLugarEscritura(String lugarEscritura) {
 		this.lugarEscritura = lugarEscritura;
+		return this;
 	}
 
 	/**
@@ -112,8 +115,9 @@ public class IdeaDTO {
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public void setTipo(TipoIdeaEnum tipo) {
+	public IdeaDTO setTipo(TipoIdeaEnum tipo) {
 		this.tipo = tipo;
+		return this;
 	}
 
 	/**
@@ -126,8 +130,9 @@ public class IdeaDTO {
 	/**
 	 * @param numeroEstudiantes the numeroEstudiantes to set
 	 */
-	public void setNumeroEstudiantes(Integer numeroEstudiantes) {
+	public IdeaDTO setNumeroEstudiantes(Integer numeroEstudiantes) {
 		this.numeroEstudiantes = numeroEstudiantes;
+		return this;
 	}
 
 	/**
@@ -140,8 +145,9 @@ public class IdeaDTO {
 	/**
 	 * @param alcance the alcance to set
 	 */
-	public void setAlcance(String alcance) {
+	public IdeaDTO setAlcance(String alcance) {
 		this.alcance = alcance;
+		return this;
 	}
 
 	/**
@@ -154,8 +160,9 @@ public class IdeaDTO {
 	/**
 	 * @param problematica the problematica to set
 	 */
-	public void setProblematica(String problematica) {
+	public IdeaDTO setProblematica(String problematica) {
 		this.problematica = problematica;
+		return this;
 	}
 
 	/**
@@ -168,8 +175,9 @@ public class IdeaDTO {
 	/**
 	 * @param ideasProyecto the ideasProyecto to set
 	 */
-	public void setIdeasProyecto(List<Idea> ideasProyecto) {
+	public IdeaDTO setIdeasProyecto(List<Idea> ideasProyecto) {
 		this.ideasProyecto = ideasProyecto;
+		return this;
 	}
 
 	/**
@@ -182,8 +190,9 @@ public class IdeaDTO {
 	/**
 	 * @param usuario the usuario to set
 	 */
-	public void setUsuario(Usuario usuario) {
+	public IdeaDTO setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+		return this;
 	}
 
 	/**
@@ -196,8 +205,9 @@ public class IdeaDTO {
 	/**
 	 * @param lights the lights to set
 	 */
-	public void setLights(Long lights) {
+	public IdeaDTO setLights(Long lights) {
 		this.lights = lights;
+		return this;
 	}
 
 	/**
@@ -210,8 +220,9 @@ public class IdeaDTO {
 	/**
 	 * @param comentarios the comentarios to set
 	 */
-	public void setComentarios(Long comentarios) {
+	public IdeaDTO setComentarios(Long comentarios) {
 		this.comentarios = comentarios;
+		return this;
 	}
 
 	/**
@@ -224,10 +235,9 @@ public class IdeaDTO {
 	/**
 	 * @param tags the tags to set
 	 */
-	public void setTags(List<Tag> tags) {
+	public IdeaDTO setTags(List<Tag> tags) {
 		this.tags = tags;
+		return this;
 	}
-	
-	
 
 }
