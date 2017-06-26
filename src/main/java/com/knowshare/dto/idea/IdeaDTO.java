@@ -22,7 +22,7 @@ public class IdeaDTO {
 	
 	private String contenido;
 	
-	private String estado;
+	private String estado;//TG y NTG
 	
 	private String lugarEscritura;
 	

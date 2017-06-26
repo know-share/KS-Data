@@ -57,6 +57,4 @@ public class Amigos implements Serializable{
 		this.amigos = amigos;
 		return this;
 	}
-	
-	
 }
