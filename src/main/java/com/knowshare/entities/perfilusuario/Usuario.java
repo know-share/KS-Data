@@ -38,6 +38,8 @@ public class Usuario{
 	@Indexed(unique=true)
 	private String username;
 	
+	private String password;
+	
 	private String nombre;
 	
 	private String apellido;
@@ -501,5 +503,30 @@ public class Usuario{
 	public Usuario setAreasConocimiento(List<AreaConocimiento> areasConocimiento) {
 		this.areasConocimiento = areasConocimiento;
 		return this;
+	}
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public Usuario setPassword(String password) {
+		this.password = password;
+		return this;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if(obj != null && this.id.equals(((Usuario)obj).getId()))
+			return true;
+		return false;
 	}
 }
