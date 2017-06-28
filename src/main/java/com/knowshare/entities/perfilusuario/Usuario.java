@@ -95,6 +95,8 @@ public class Usuario{
 	
 	private Amigos seguidores;
 	
+	private Amigos solicitudesAmistad;
+	
 	@DBRef
 	private Personalidad personalidad;
 	
@@ -517,6 +519,23 @@ public class Usuario{
 	 */
 	public Usuario setPassword(String password) {
 		this.password = password;
+		return this;
+	}
+	
+	
+
+	/**
+	 * @return the solicitudesAmistad
+	 */
+	public Amigos getSolicitudesAmistad() {
+		return solicitudesAmistad;
+	}
+
+	/**
+	 * @param solicitudesAmistad the solicitudesAmistad to set
+	 */
+	public Usuario setSolicitudesAmistad(Amigos solicitudesAmistad) {
+		this.solicitudesAmistad = solicitudesAmistad;
 		return this;
 	}
 

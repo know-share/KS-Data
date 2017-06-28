@@ -3,6 +3,7 @@
  */
 package com.knowshare.entities.idea;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -56,6 +57,11 @@ public class Idea {
 	
 	@DBRef
 	private List<Tag> tags;
+	
+	public Idea(){
+		operaciones = new ArrayList<>();
+		tags = new ArrayList<>();
+	}
 
 	/**
 	 * @return the id
