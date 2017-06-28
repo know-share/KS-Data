@@ -3,8 +3,6 @@
  */
 package com.knowshare.entities.perfilusuario;
 
-import java.io.Serializable;
-
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,9 +16,7 @@ import com.knowshare.enums.TipoCualidadEnum;
  *
  */
 @Document(collection = "cualidad")
-public class Cualidad implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class Cualidad{
 	
 	@Id
 	private ObjectId id;

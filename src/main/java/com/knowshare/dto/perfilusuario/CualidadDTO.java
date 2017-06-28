@@ -7,26 +7,24 @@ import java.io.Serializable;
 
 import org.bson.types.ObjectId;
 
-import com.knowshare.enums.TipoHabilidadEnum;
+import com.knowshare.enums.TipoCualidadEnum;
 
 /**
  * @author miguel
  *
  */
-public class HabilidadDTO implements Serializable{
+public class CualidadDTO implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private ObjectId id;
-	
+
 	private String nombre;
-	
-	private TipoHabilidadEnum tipo;
-	
-	private String carrera;
+
+	private TipoCualidadEnum tipo;
 	
 	private Integer avales;
 
@@ -40,7 +38,7 @@ public class HabilidadDTO implements Serializable{
 	/**
 	 * @param id the id to set
 	 */
-	public HabilidadDTO setId(ObjectId id) {
+	public CualidadDTO setId(ObjectId id) {
 		this.id = id;
 		return this;
 	}
@@ -55,7 +53,7 @@ public class HabilidadDTO implements Serializable{
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public HabilidadDTO setNombre(String nombre) {
+	public CualidadDTO setNombre(String nombre) {
 		this.nombre = nombre;
 		return this;
 	}
@@ -63,30 +61,15 @@ public class HabilidadDTO implements Serializable{
 	/**
 	 * @return the tipo
 	 */
-	public TipoHabilidadEnum getTipo() {
+	public TipoCualidadEnum getTipo() {
 		return tipo;
 	}
 
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public HabilidadDTO setTipo(TipoHabilidadEnum tipo) {
+	public CualidadDTO setTipo(TipoCualidadEnum tipo) {
 		this.tipo = tipo;
-		return this;
-	}
-
-	/**
-	 * @return the carrera
-	 */
-	public String getCarrera() {
-		return carrera;
-	}
-
-	/**
-	 * @param carrera the carrera to set
-	 */
-	public HabilidadDTO setCarrera(String carrera) {
-		this.carrera = carrera;
 		return this;
 	}
 
@@ -100,7 +83,7 @@ public class HabilidadDTO implements Serializable{
 	/**
 	 * @param avales the avales to set
 	 */
-	public HabilidadDTO setAvales(Integer avales) {
+	public CualidadDTO setAvales(Integer avales) {
 		this.avales = avales;
 		return this;
 	}

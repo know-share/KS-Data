@@ -8,7 +8,6 @@ import java.util.List;
 
 import com.knowshare.dto.academia.CarreraDTO;
 import com.knowshare.entities.academia.AreaConocimiento;
-import com.knowshare.entities.perfilusuario.Cualidad;
 import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
 import com.knowshare.entities.perfilusuario.Personalidad;
@@ -58,10 +57,20 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<HabilidadDTO> habilidades;
 	
-	private List<Cualidad> cualidades;
+	private List<CualidadDTO> cualidades;
 	
 	private PreferenciaIdeaEnum preferenciaIdea;
-
+	
+	private Integer cantidadAmigos;
+	
+	private List<String> amigos;
+	
+	private Integer cantidadSeguidores;
+	
+	private List<String> seguidores;
+	
+	private List<String> insignias;
+	
 	/**
 	 * @return the nombre
 	 */
@@ -305,14 +314,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the cualidades
 	 */
-	public List<Cualidad> getCualidades() {
+	public List<CualidadDTO> getCualidades() {
 		return cualidades;
 	}
 
 	/**
 	 * @param cualidades the cualidades to set
 	 */
-	public UsuarioDTO setCualidades(List<Cualidad> cualidades) {
+	public UsuarioDTO setCualidades(List<CualidadDTO> cualidades) {
 		this.cualidades = cualidades;
 		return this;
 	}
@@ -329,6 +338,81 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setPreferenciaIdea(PreferenciaIdeaEnum preferenciaIdea) {
 		this.preferenciaIdea = preferenciaIdea;
+		return this;
+	}
+
+	/**
+	 * @return the cantidadAmigos
+	 */
+	public Integer getCantidadAmigos() {
+		return cantidadAmigos;
+	}
+
+	/**
+	 * @param cantidadAmigos the cantidadAmigos to set
+	 */
+	public UsuarioDTO setCantidadAmigos(Integer cantidadAmigos) {
+		this.cantidadAmigos = cantidadAmigos;
+		return this;
+	}
+
+	/**
+	 * @return the amigos
+	 */
+	public List<String> getAmigos() {
+		return amigos;
+	}
+
+	/**
+	 * @param amigos the amigos to set
+	 */
+	public UsuarioDTO setAmigos(List<String> amigos) {
+		this.amigos = amigos;
+		return this;
+	}
+
+	/**
+	 * @return the cantidadSeguidores
+	 */
+	public Integer getCantidadSeguidores() {
+		return cantidadSeguidores;
+	}
+
+	/**
+	 * @param cantidadSeguidores the cantidadSeguidores to set
+	 */
+	public UsuarioDTO setCantidadSeguidores(Integer cantidadSeguidores) {
+		this.cantidadSeguidores = cantidadSeguidores;
+		return this;
+	}
+
+	/**
+	 * @return the seguidores
+	 */
+	public List<String> getSeguidores() {
+		return seguidores;
+	}
+
+	/**
+	 * @param seguidores the seguidores to set
+	 */
+	public UsuarioDTO setSeguidores(List<String> seguidores) {
+		this.seguidores = seguidores;
+		return this;
+	}
+
+	/**
+	 * @return the insignias
+	 */
+	public List<String> getInsignias() {
+		return insignias;
+	}
+
+	/**
+	 * @param insignias the insignias to set
+	 */
+	public UsuarioDTO setInsignias(List<String> insignias) {
+		this.insignias = insignias;
 		return this;
 	}
 }
