@@ -43,9 +43,9 @@ public class UsuarioDTO implements Serializable{
 	
 	private Integer semestre;
 	
-	private boolean seminario;
+	private Boolean seminario;
 	
-	private boolean temaTG;
+	private Boolean temaTG;
 	
 	private Personalidad personalidad;
 	
@@ -209,14 +209,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the seminario
 	 */
-	public boolean isSeminario() {
+	public Boolean isSeminario() {
 		return seminario;
 	}
 
 	/**
 	 * @param seminario the seminario to set
 	 */
-	public UsuarioDTO setSeminario(boolean seminario) {
+	public UsuarioDTO setSeminario(Boolean seminario) {
 		this.seminario = seminario;
 		return this;
 	}
@@ -224,14 +224,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the temaTG
 	 */
-	public boolean isTemaTG() {
+	public Boolean isTemaTG() {
 		return temaTG;
 	}
 
 	/**
 	 * @param temaTG the temaTG to set
 	 */
-	public UsuarioDTO setTemaTG(boolean temaTG) {
+	public UsuarioDTO setTemaTG(Boolean temaTG) {
 		this.temaTG = temaTG;
 		return this;
 	}

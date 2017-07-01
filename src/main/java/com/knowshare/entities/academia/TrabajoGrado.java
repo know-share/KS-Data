@@ -3,6 +3,8 @@
  */
 package com.knowshare.entities.academia;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -21,11 +23,13 @@ public class TrabajoGrado{
 	
 	private String nombre;
 	
-	private Integer periodoFin;
+	private String periodoFin;
 	
 	private String resumen;
 	
 	private String modalidad;
+	
+	private List<String> descripción;
 
 	/**
 	 * @return the id
@@ -60,14 +64,14 @@ public class TrabajoGrado{
 	/**
 	 * @return the periodoFin
 	 */
-	public Integer getPeriodoFin() {
+	public String getPeriodoFin() {
 		return periodoFin;
 	}
 
 	/**
 	 * @param periodoFin the periodoFin to set
 	 */
-	public TrabajoGrado setPeriodoFin(Integer periodoFin) {
+	public TrabajoGrado setPeriodoFin(String periodoFin) {
 		this.periodoFin = periodoFin;
 		return this;
 	}
@@ -99,6 +103,21 @@ public class TrabajoGrado{
 	 */
 	public TrabajoGrado setModalidad(String modalidad) {
 		this.modalidad = modalidad;
+		return this;
+	}
+
+	/**
+	 * @return the descripción
+	 */
+	public List<String> getDescripción() {
+		return descripción;
+	}
+
+	/**
+	 * @param descripción the descripción to set
+	 */
+	public TrabajoGrado setDescripción(List<String> descripción) {
+		this.descripción = descripción;
 		return this;
 	}
 }

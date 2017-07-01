@@ -13,9 +13,9 @@ public class PreferenciasUsuario {
 	
 	private PreferenciaIdeaEnum preferenciaIdea;
 	
-	private boolean seminario;
+	private Boolean seminario;
 	
-	private boolean temaTG;
+	private Boolean temaTG;
 
 	/**
 	 * @return the preferenciaIdea
@@ -35,14 +35,14 @@ public class PreferenciasUsuario {
 	/**
 	 * @return the seminario
 	 */
-	public boolean isSeminario() {
+	public Boolean isSeminario() {
 		return seminario;
 	}
 
 	/**
 	 * @param seminario the seminario to set
 	 */
-	public PreferenciasUsuario setSeminario(boolean seminario) {
+	public PreferenciasUsuario setSeminario(Boolean seminario) {
 		this.seminario = seminario;
 		return this;
 	}
