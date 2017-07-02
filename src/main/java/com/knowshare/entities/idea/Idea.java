@@ -61,6 +61,8 @@ public class Idea {
 	public Idea(){
 		operaciones = new ArrayList<>();
 		tags = new ArrayList<>();
+		lights = new Long(0);
+		comentarios = new Long(0);
 	}
 
 	/**

@@ -20,7 +20,7 @@ public class AuthDTO implements Serializable{
 	
 	private String password;
 	
-	private String token;
+	//private String token;
 
 	/**
 	 * @return the username
@@ -53,16 +53,16 @@ public class AuthDTO implements Serializable{
 	/**
 	 * @return the token
 	 */
-	public String getToken() {
+	/*public String getToken() {
 		return token;
 	}
 
 	/**
 	 * @param token the token to set
 	 */
-	public void setToken(String token) {
+	/*public void setToken(String token) {
 		this.token = token;
-	}
+	}*/
 	
 	
 
