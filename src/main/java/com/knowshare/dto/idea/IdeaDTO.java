@@ -7,9 +7,8 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
-import com.knowshare.entities.idea.Idea;
+import com.knowshare.dto.perfilusuario.UsuarioDTO;
 import com.knowshare.entities.idea.Tag;
-import com.knowshare.entities.perfilusuario.Usuario;
 import com.knowshare.enums.TipoIdeaEnum;
 
 /**
@@ -34,9 +33,9 @@ public class IdeaDTO {
 	
 	private String problematica;
 
-	private List<Idea> ideasProyecto;
+	private List<IdeaDTO> ideasProyecto;
 	
-	private Usuario usuario;
+	private UsuarioDTO usuario;
 	
 	private Long lights;
 	
@@ -168,14 +167,14 @@ public class IdeaDTO {
 	/**
 	 * @return the ideasProyecto
 	 */
-	public List<Idea> getIdeasProyecto() {
+	public List<IdeaDTO> getIdeasProyecto() {
 		return ideasProyecto;
 	}
 
 	/**
 	 * @param ideasProyecto the ideasProyecto to set
 	 */
-	public IdeaDTO setIdeasProyecto(List<Idea> ideasProyecto) {
+	public IdeaDTO setIdeasProyecto(List<IdeaDTO> ideasProyecto) {
 		this.ideasProyecto = ideasProyecto;
 		return this;
 	}
@@ -183,14 +182,14 @@ public class IdeaDTO {
 	/**
 	 * @return the usuario
 	 */
-	public Usuario getUsuario() {
+	public UsuarioDTO getUsuario() {
 		return usuario;
 	}
 
 	/**
 	 * @param usuario the usuario to set
 	 */
-	public IdeaDTO setUsuario(Usuario usuario) {
+	public IdeaDTO setUsuario(UsuarioDTO usuario) {
 		this.usuario = usuario;
 		return this;
 	}
