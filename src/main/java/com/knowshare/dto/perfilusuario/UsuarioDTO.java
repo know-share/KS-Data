@@ -6,6 +6,8 @@ package com.knowshare.dto.perfilusuario;
 import java.io.Serializable;
 import java.util.List;
 
+import org.bson.types.ObjectId;
+
 import com.knowshare.dto.academia.CarreraDTO;
 import com.knowshare.entities.academia.AreaConocimiento;
 import com.knowshare.entities.perfilusuario.Enfasis;
@@ -24,6 +26,8 @@ public class UsuarioDTO implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private ObjectId id;
 	
 	private String nombre;
 	
@@ -71,6 +75,21 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<String> insignias;
 	
+	/**
+	 * @return the id
+	 */
+	public ObjectId getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public UsuarioDTO setId(ObjectId id) {
+		this.id = id;
+		return this;
+	}
+
 	/**
 	 * @return the nombre
 	 */

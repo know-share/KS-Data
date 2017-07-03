@@ -33,8 +33,9 @@ public class UserSession {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(ObjectId id) {
+	public UserSession setId(ObjectId id) {
 		this.id = id;
+		return this;
 	}
 
 	/**
@@ -47,8 +48,9 @@ public class UserSession {
 	/**
 	 * @param username the username to set
 	 */
-	public void setUsername(String username) {
+	public UserSession setUsername(String username) {
 		this.username = username;
+		return this;
 	}
 
 	/**
@@ -61,8 +63,9 @@ public class UserSession {
 	/**
 	 * @param token the token to set
 	 */
-	public void setToken(String token) {
+	public UserSession setToken(String token) {
 		this.token = token;
+		return this;
 	}
 
 	/**
@@ -75,7 +78,8 @@ public class UserSession {
 	/**
 	 * @param secretKey the secretKey to set
 	 */
-	public void setSecretKey(String secretKey) {
+	public UserSession setSecretKey(String secretKey) {
 		this.secretKey = secretKey;
+		return this;
 	}
 }

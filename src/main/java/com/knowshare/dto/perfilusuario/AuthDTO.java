@@ -30,8 +30,9 @@ public class AuthDTO implements Serializable{
 	/**
 	 * @param username the username to set
 	 */
-	public void setUsername(String username) {
+	public AuthDTO setUsername(String username) {
 		this.username = username;
+		return this;
 	}
 
 	/**
@@ -44,7 +45,8 @@ public class AuthDTO implements Serializable{
 	/**
 	 * @param password the password to set
 	 */
-	public void setPassword(String password) {
+	public AuthDTO setPassword(String password) {
 		this.password = password;
+		return this;
 	}
 }
