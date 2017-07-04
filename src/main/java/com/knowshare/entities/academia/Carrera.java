@@ -24,6 +24,10 @@ public class Carrera {
 	
 	@DBRef(lazy = true)
 	private List<Carrera> carrerasAfines;
+	
+	private List<String> enfasis;
+	
+	private List<String> areaConocimiento;
 
 	/**
 	 * @return the nombre
@@ -70,4 +74,33 @@ public class Carrera {
 		return this;
 	}
 
+	/**
+	 * @return the enfasis
+	 */
+	public List<String> getEnfasis() {
+		return enfasis;
+	}
+
+	/**
+	 * @param enfasis the enfasis to set
+	 */
+	public Carrera setEnfasis(List<String> enfasis) {
+		this.enfasis = enfasis;
+		return this;
+	}
+
+	/**
+	 * @return the areaConocimiento
+	 */
+	public List<String> getAreaConocimiento() {
+		return areaConocimiento;
+	}
+
+	/**
+	 * @param areaConocimiento the areaConocimiento to set
+	 */
+	public Carrera setAreaConocimiento(List<String> areaConocimiento) {
+		this.areaConocimiento = areaConocimiento;
+		return this;
+	}
 }

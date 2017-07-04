@@ -1,19 +1,24 @@
 /**
  * 
  */
-package com.knowshare.entities.academia;
+package com.knowshare.entities.perfilusuario;
+
+import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * Ya que cada carrera cuenta con diversos enfasis, este
- * documento representa dichos enfasis.
  * @author miguel
  *
  */
-@Document(collection = "enfasis")
-public class Enfasis {
+@Document(collection = "personalidad")
+public class Personalidad implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private String nombre;
@@ -28,7 +33,7 @@ public class Enfasis {
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public Enfasis setNombre(String nombre) {
+	public Personalidad setNombre(String nombre) {
 		this.nombre = nombre;
 		return this;
 	}

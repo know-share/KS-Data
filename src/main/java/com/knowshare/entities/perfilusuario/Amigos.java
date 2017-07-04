@@ -4,6 +4,7 @@
 package com.knowshare.entities.perfilusuario;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -22,7 +23,11 @@ public class Amigos implements Serializable{
 	
 	@DBRef
 	private List<Usuario> amigos;
-
+	
+	public Amigos(){
+		cantidad = 0;
+		amigos = new ArrayList<>();
+	}
 	/**
 	 * @return the cantidad
 	 */

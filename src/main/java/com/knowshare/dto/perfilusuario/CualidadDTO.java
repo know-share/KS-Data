@@ -1,29 +1,32 @@
 /**
  * 
  */
-package com.knowshare.entities.perfilusuario;
+package com.knowshare.dto.perfilusuario;
+
+import java.io.Serializable;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.knowshare.enums.TipoCualidadEnum;
 
 /**
- * Cualidad que un usuario ha seleccionado como parte de
- * la construccion de su perfil
  * @author miguel
  *
  */
-@Document(collection = "cualidad")
-public class Cualidad{
-	
-	@Id
+public class CualidadDTO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private ObjectId id;
-	
+
 	private String nombre;
-	
+
 	private TipoCualidadEnum tipo;
+	
+	private Integer avales;
 
 	/**
 	 * @return the id
@@ -35,7 +38,7 @@ public class Cualidad{
 	/**
 	 * @param id the id to set
 	 */
-	public Cualidad setId(ObjectId id) {
+	public CualidadDTO setId(ObjectId id) {
 		this.id = id;
 		return this;
 	}
@@ -50,7 +53,7 @@ public class Cualidad{
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public Cualidad setNombre(String nombre) {
+	public CualidadDTO setNombre(String nombre) {
 		this.nombre = nombre;
 		return this;
 	}
@@ -65,8 +68,23 @@ public class Cualidad{
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public Cualidad setTipo(TipoCualidadEnum tipo) {
+	public CualidadDTO setTipo(TipoCualidadEnum tipo) {
 		this.tipo = tipo;
+		return this;
+	}
+
+	/**
+	 * @return the avales
+	 */
+	public Integer getAvales() {
+		return avales;
+	}
+
+	/**
+	 * @param avales the avales to set
+	 */
+	public CualidadDTO setAvales(Integer avales) {
+		this.avales = avales;
 		return this;
 	}
 }

@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import com.knowshare.entities.perfilusuario.Cualidad;
 import com.knowshare.entities.perfilusuario.Habilidad;
 import com.knowshare.entities.perfilusuario.Usuario;
-import com.knowshare.enums.AvalTipoEnum;
+import com.knowshare.enums.TipoAvalEnum;
 
 /**
  * Cada vez que un usuario avala la habilidad o cualidad de
@@ -22,7 +22,7 @@ public class UsuarioAval{
 	@DBRef
 	private Usuario usuario;
 	
-	private AvalTipoEnum tipo;
+	private TipoAvalEnum tipo;
 	
 	@DBRef
 	private Cualidad cualidad;
@@ -48,14 +48,14 @@ public class UsuarioAval{
 	/**
 	 * @return the tipo
 	 */
-	public AvalTipoEnum getTipo() {
+	public TipoAvalEnum getTipo() {
 		return tipo;
 	}
 
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public UsuarioAval setTipo(AvalTipoEnum tipo) {
+	public UsuarioAval setTipo(TipoAvalEnum tipo) {
 		this.tipo = tipo;
 		return this;
 	}

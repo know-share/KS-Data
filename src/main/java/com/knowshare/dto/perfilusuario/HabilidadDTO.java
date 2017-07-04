@@ -1,34 +1,34 @@
 /**
  * 
  */
-package com.knowshare.entities.perfilusuario;
+package com.knowshare.dto.perfilusuario;
+
+import java.io.Serializable;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.knowshare.entities.academia.Carrera;
 import com.knowshare.enums.TipoHabilidadEnum;
 
 /**
- * Habilidades que un usuario puede tener dentro de la aplicacion para
- * completar la informacion de su perfil
  * @author miguel
  *
  */
-@Document(collection = "habilidad")
-public class Habilidad{
+public class HabilidadDTO implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	@Id
 	private ObjectId id;
 	
 	private String nombre;
 	
 	private TipoHabilidadEnum tipo;
 	
-	@DBRef
-	private Carrera carrera;
+	private String carrera;
+	
+	private Integer avales;
 
 	/**
 	 * @return the id
@@ -40,7 +40,7 @@ public class Habilidad{
 	/**
 	 * @param id the id to set
 	 */
-	public Habilidad setId(ObjectId id) {
+	public HabilidadDTO setId(ObjectId id) {
 		this.id = id;
 		return this;
 	}
@@ -55,7 +55,7 @@ public class Habilidad{
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public Habilidad setNombre(String nombre) {
+	public HabilidadDTO setNombre(String nombre) {
 		this.nombre = nombre;
 		return this;
 	}
@@ -70,7 +70,7 @@ public class Habilidad{
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public Habilidad setTipo(TipoHabilidadEnum tipo) {
+	public HabilidadDTO setTipo(TipoHabilidadEnum tipo) {
 		this.tipo = tipo;
 		return this;
 	}
@@ -78,15 +78,30 @@ public class Habilidad{
 	/**
 	 * @return the carrera
 	 */
-	public Carrera getCarrera() {
+	public String getCarrera() {
 		return carrera;
 	}
 
 	/**
 	 * @param carrera the carrera to set
 	 */
-	public Habilidad setCarrera(Carrera carrera) {
+	public HabilidadDTO setCarrera(String carrera) {
 		this.carrera = carrera;
+		return this;
+	}
+
+	/**
+	 * @return the avales
+	 */
+	public Integer getAvales() {
+		return avales;
+	}
+
+	/**
+	 * @param avales the avales to set
+	 */
+	public HabilidadDTO setAvales(Integer avales) {
+		this.avales = avales;
 		return this;
 	}
 }

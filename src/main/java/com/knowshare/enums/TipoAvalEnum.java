@@ -7,7 +7,7 @@ package com.knowshare.enums;
  * @author miguel
  *
  */
-public enum AvalTipoEnum {
+public enum TipoAvalEnum {
 	
 	CUALIDAD,
 	HABILIDAD;
