@@ -29,6 +29,7 @@ public class TrabajoGrado{
 	
 	private String modalidad;
 	
+	//Tags
 	private List<String> descripción;
 
 	/**

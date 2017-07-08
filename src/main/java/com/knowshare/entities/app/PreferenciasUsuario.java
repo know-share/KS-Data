@@ -50,14 +50,14 @@ public class PreferenciasUsuario {
 	/**
 	 * @return the temaTG
 	 */
-	public boolean isTemaTG() {
+	public Boolean isTemaTG() {
 		return temaTG;
 	}
 
 	/**
 	 * @param temaTG the temaTG to set
 	 */
-	public PreferenciasUsuario setTemaTG(boolean temaTG) {
+	public PreferenciasUsuario setTemaTG(Boolean temaTG) {
 		this.temaTG = temaTG;
 		return this;
 	}
