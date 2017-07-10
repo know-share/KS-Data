@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
-import com.knowshare.dto.perfilusuario.UsuarioDTO;
 import com.knowshare.entities.idea.Tag;
 import com.knowshare.enums.TipoIdeaEnum;
 
@@ -35,7 +34,7 @@ public class IdeaDTO {
 
 	private List<IdeaDTO> ideasProyecto;
 	
-	private UsuarioDTO usuario;
+	private String usuario;
 	
 	private Long lights;
 	
@@ -182,14 +181,14 @@ public class IdeaDTO {
 	/**
 	 * @return the usuario
 	 */
-	public UsuarioDTO getUsuario() {
+	public String getUsuario() {
 		return usuario;
 	}
 
 	/**
 	 * @param usuario the usuario to set
 	 */
-	public IdeaDTO setUsuario(UsuarioDTO usuario) {
+	public IdeaDTO setUsuario(String usuario) {
 		this.usuario = usuario;
 		return this;
 	}
