@@ -75,6 +75,8 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<String> insignias;
 	
+	private List<String> solicitudesAmistad;
+	
 	/**
 	 * @return the id
 	 */
@@ -433,5 +435,19 @@ public class UsuarioDTO implements Serializable{
 	public UsuarioDTO setInsignias(List<String> insignias) {
 		this.insignias = insignias;
 		return this;
+	}
+
+	/**
+	 * @return the solicitudesAmistad
+	 */
+	public List<String> getSolicitudesAmistad() {
+		return solicitudesAmistad;
+	}
+
+	/**
+	 * @param solicitudesAmistad the solicitudesAmistad to set
+	 */
+	public void setSolicitudesAmistad(List<String> solicitudesAmistad) {
+		this.solicitudesAmistad = solicitudesAmistad;
 	}
 }

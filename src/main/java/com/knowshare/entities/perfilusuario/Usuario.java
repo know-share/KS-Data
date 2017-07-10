@@ -91,11 +91,11 @@ public class Usuario{
 	@DBRef(lazy = true)
 	private List<TrabajoGrado> trabajosGradoDirigidos;
 	
-	private Amigos amigos;
+	private List<String> amigos;
 	
-	private Amigos seguidores;
+	private List<String> seguidores;
 	
-	private Amigos solicitudesAmistad;
+	private List<String> solicitudesAmistad;
 	
 	@DBRef
 	private Personalidad personalidad;
@@ -435,14 +435,14 @@ public class Usuario{
 	/**
 	 * @return the amigos
 	 */
-	public Amigos getAmigos() {
+	public List<String> getAmigos() {
 		return amigos;
 	}
 
 	/**
 	 * @param amigos the amigos to set
 	 */
-	public Usuario setAmigos(Amigos amigos) {
+	public Usuario setAmigos(List<String> amigos) {
 		this.amigos = amigos;
 		return this;
 	}
@@ -450,14 +450,14 @@ public class Usuario{
 	/**
 	 * @return the seguidores
 	 */
-	public Amigos getSeguidores() {
+	public List<String> getSeguidores() {
 		return seguidores;
 	}
 
 	/**
 	 * @param seguidores the seguidores to set
 	 */
-	public Usuario setSeguidores(Amigos seguidores) {
+	public Usuario setSeguidores(List<String> seguidores) {
 		this.seguidores = seguidores;
 		return this;
 	}
@@ -527,14 +527,14 @@ public class Usuario{
 	/**
 	 * @return the solicitudesAmistad
 	 */
-	public Amigos getSolicitudesAmistad() {
+	public List<String> getSolicitudesAmistad() {
 		return solicitudesAmistad;
 	}
 
 	/**
 	 * @param solicitudesAmistad the solicitudesAmistad to set
 	 */
-	public Usuario setSolicitudesAmistad(Amigos solicitudesAmistad) {
+	public Usuario setSolicitudesAmistad(List<String> solicitudesAmistad) {
 		this.solicitudesAmistad = solicitudesAmistad;
 		return this;
 	}
