@@ -70,7 +70,6 @@ public class Usuario{
 	
 	private List<UsuarioAval> personasAvaladas;
 	
-	
 	@DBRef
 	// A lo mucho 2 carreras
 	private List<Carrera> carreras;

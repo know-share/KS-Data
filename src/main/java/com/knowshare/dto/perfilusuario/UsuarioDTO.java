@@ -10,6 +10,8 @@ import org.bson.types.ObjectId;
 
 import com.knowshare.dto.academia.CarreraDTO;
 import com.knowshare.entities.academia.AreaConocimiento;
+import com.knowshare.entities.academia.FormacionAcademica;
+import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
 import com.knowshare.entities.perfilusuario.Personalidad;
@@ -76,6 +78,10 @@ public class UsuarioDTO implements Serializable{
 	private List<String> insignias;
 	
 	private List<String> solicitudesAmistad;
+	
+	private List<TrabajoGrado> tgDirigidos;
+	
+	private List<FormacionAcademica> formacionAcademia;
 	
 	/**
 	 * @return the id
@@ -447,7 +453,38 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @param solicitudesAmistad the solicitudesAmistad to set
 	 */
-	public void setSolicitudesAmistad(List<String> solicitudesAmistad) {
+	public UsuarioDTO setSolicitudesAmistad(List<String> solicitudesAmistad) {
 		this.solicitudesAmistad = solicitudesAmistad;
+		return this;
+	}
+
+	/**
+	 * @return the tgDirigidos
+	 */
+	public List<TrabajoGrado> getTgDirigidos() {
+		return tgDirigidos;
+	}
+
+	/**
+	 * @param tgDirigidos the tgDirigidos to set
+	 */
+	public UsuarioDTO setTgDirigidos(List<TrabajoGrado> tgDirigidos) {
+		this.tgDirigidos = tgDirigidos;
+		return this;
+	}
+
+	/**
+	 * @return the formacionAcademia
+	 */
+	public List<FormacionAcademica> getFormacionAcademia() {
+		return formacionAcademia;
+	}
+
+	/**
+	 * @param formacionAcademia the formacionAcademia to set
+	 */
+	public UsuarioDTO setFormacionAcademia(List<FormacionAcademica> formacionAcademia) {
+		this.formacionAcademia = formacionAcademia;
+		return this;
 	}
 }
