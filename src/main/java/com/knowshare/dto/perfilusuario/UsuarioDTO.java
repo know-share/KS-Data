@@ -14,6 +14,7 @@ import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
+import com.knowshare.entities.perfilusuario.InfoUsuario;
 import com.knowshare.entities.perfilusuario.Personalidad;
 import com.knowshare.enums.PreferenciaIdeaEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
@@ -69,11 +70,11 @@ public class UsuarioDTO implements Serializable{
 	
 	private Integer cantidadAmigos;
 	
-	private List<String> amigos;
+	private List<InfoUsuario> amigos;
 	
 	private Integer cantidadSeguidores;
 	
-	private List<String> seguidores;
+	private List<InfoUsuario> seguidores;
 	
 	private List<String> insignias;
 	
@@ -81,7 +82,7 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<TrabajoGrado> tgDirigidos;
 	
-	private List<FormacionAcademica> formacionAcademia;
+	private List<FormacionAcademica> formacionAcademica;
 	
 	/**
 	 * @return the id
@@ -386,14 +387,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the amigos
 	 */
-	public List<String> getAmigos() {
+	public List<InfoUsuario> getAmigos() {
 		return amigos;
 	}
 
 	/**
 	 * @param amigos the amigos to set
 	 */
-	public UsuarioDTO setAmigos(List<String> amigos) {
+	public UsuarioDTO setAmigos(List<InfoUsuario> amigos) {
 		this.amigos = amigos;
 		return this;
 	}
@@ -416,14 +417,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the seguidores
 	 */
-	public List<String> getSeguidores() {
+	public List<InfoUsuario> getSeguidores() {
 		return seguidores;
 	}
 
 	/**
 	 * @param seguidores the seguidores to set
 	 */
-	public UsuarioDTO setSeguidores(List<String> seguidores) {
+	public UsuarioDTO setSeguidores(List<InfoUsuario> seguidores) {
 		this.seguidores = seguidores;
 		return this;
 	}
@@ -476,15 +477,15 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the formacionAcademia
 	 */
-	public List<FormacionAcademica> getFormacionAcademia() {
-		return formacionAcademia;
+	public List<FormacionAcademica> getFormacionAcademica() {
+		return formacionAcademica;
 	}
 
 	/**
 	 * @param formacionAcademia the formacionAcademia to set
 	 */
-	public UsuarioDTO setFormacionAcademia(List<FormacionAcademica> formacionAcademia) {
-		this.formacionAcademia = formacionAcademia;
+	public UsuarioDTO setFormacionAcademica(List<FormacionAcademica> formacionAcademica) {
+		this.formacionAcademica = formacionAcademica;
 		return this;
 	}
 }
