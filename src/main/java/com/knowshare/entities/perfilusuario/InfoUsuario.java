@@ -88,6 +88,6 @@ public class InfoUsuario implements Serializable{
 	}
 
 	public boolean equals(String usuario){
-		return this.username.equals(usuario);
+		return this.username.equalsIgnoreCase(usuario);
 	}
 }
