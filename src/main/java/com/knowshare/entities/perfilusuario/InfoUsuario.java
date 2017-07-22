@@ -77,8 +77,7 @@ public class InfoUsuario implements Serializable{
 		if (nombre == null) {
 			if (other.nombre != null)
 				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
+		}
 		if (username == null) {
 			if (other.username != null)
 				return false;
