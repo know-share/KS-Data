@@ -76,6 +76,8 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<InfoUsuario> seguidores;
 	
+	private List<InfoUsuario> siguiendo;
+	
 	private List<String> insignias;
 	
 	private List<String> solicitudesAmistad;
@@ -486,6 +488,21 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setFormacionAcademica(List<FormacionAcademica> formacionAcademica) {
 		this.formacionAcademica = formacionAcademica;
+		return this;
+	}
+
+	/**
+	 * @return the siguiendo
+	 */
+	public List<InfoUsuario> getSiguiendo() {
+		return siguiendo;
+	}
+
+	/**
+	 * @param siguiendo the siguiendo to set
+	 */
+	public UsuarioDTO setSiguiendo(List<InfoUsuario> siguiendo) {
+		this.siguiendo = siguiendo;
 		return this;
 	}
 }

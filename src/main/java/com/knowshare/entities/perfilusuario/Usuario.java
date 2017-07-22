@@ -44,6 +44,8 @@ public class Usuario{
 	
 	private String apellido;
 	
+	private String genero;
+	
 	@Indexed(unique=true)
 	private String correo;
 	
@@ -93,6 +95,8 @@ public class Usuario{
 	private List<InfoUsuario> amigos;
 	
 	private List<InfoUsuario> seguidores;
+	
+	private List<InfoUsuario> siguiendo;
 	
 	private List<String> solicitudesAmistad;
 	
@@ -521,8 +525,6 @@ public class Usuario{
 		return this;
 	}
 	
-	
-
 	/**
 	 * @return the solicitudesAmistad
 	 */
@@ -535,6 +537,36 @@ public class Usuario{
 	 */
 	public Usuario setSolicitudesAmistad(List<String> solicitudesAmistad) {
 		this.solicitudesAmistad = solicitudesAmistad;
+		return this;
+	}
+
+	/**
+	 * @return the siguiendo
+	 */
+	public List<InfoUsuario> getSiguiendo() {
+		return siguiendo;
+	}
+
+	/**
+	 * @param siguiendo the siguiendo to set
+	 */
+	public Usuario setSiguiendo(List<InfoUsuario> siguiendo) {
+		this.siguiendo = siguiendo;
+		return this;
+	}
+	
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public Usuario setGenero(String genero) {
+		this.genero = genero;
 		return this;
 	}
 
