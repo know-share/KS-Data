@@ -3,14 +3,21 @@
  */
 package com.knowshare.entities.academia;
 
+import java.io.Serializable;
+
 /**
  * Esta clase es un documento embebido por cada usuario que 
  * da a conocer la formacion academica de un usuario
  * @author miguel
  *
  */
-public class FormacionAcademica {
+public class FormacionAcademica implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String titulo;
 	
 	private Integer anio;

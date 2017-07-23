@@ -3,6 +3,7 @@
  */
 package com.knowshare.entities.academia;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.bson.types.ObjectId;
@@ -16,8 +17,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection = "trabajo_grado")
-public class TrabajoGrado{
+public class TrabajoGrado implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private ObjectId id;
 	
@@ -27,8 +33,9 @@ public class TrabajoGrado{
 	
 	private String resumen;
 	
-	private String modalidad;
+	private Integer numEstudiantes;
 	
+	//Tags
 	private List<String> descripción;
 
 	/**
@@ -92,21 +99,6 @@ public class TrabajoGrado{
 	}
 
 	/**
-	 * @return the modalidad
-	 */
-	public String getModalidad() {
-		return modalidad;
-	}
-
-	/**
-	 * @param modalidad the modalidad to set
-	 */
-	public TrabajoGrado setModalidad(String modalidad) {
-		this.modalidad = modalidad;
-		return this;
-	}
-
-	/**
 	 * @return the descripción
 	 */
 	public List<String> getDescripción() {
@@ -118,6 +110,21 @@ public class TrabajoGrado{
 	 */
 	public TrabajoGrado setDescripción(List<String> descripción) {
 		this.descripción = descripción;
+		return this;
+	}
+
+	/**
+	 * @return the numEstudiantes
+	 */
+	public Integer getNumEstudiantes() {
+		return numEstudiantes;
+	}
+
+	/**
+	 * @param numEstudiantes the numEstudiantes to set
+	 */
+	public TrabajoGrado setNumEstudiantes(Integer numEstudiantes) {
+		this.numEstudiantes = numEstudiantes;
 		return this;
 	}
 }

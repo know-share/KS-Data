@@ -44,6 +44,8 @@ public class Usuario{
 	
 	private String apellido;
 	
+	private String genero;
+	
 	@Indexed(unique=true)
 	private String correo;
 	
@@ -70,7 +72,6 @@ public class Usuario{
 	
 	private List<UsuarioAval> personasAvaladas;
 	
-	
 	@DBRef
 	// A lo mucho 2 carreras
 	private List<Carrera> carreras;
@@ -91,11 +92,13 @@ public class Usuario{
 	@DBRef(lazy = true)
 	private List<TrabajoGrado> trabajosGradoDirigidos;
 	
-	private Amigos amigos;
+	private List<InfoUsuario> amigos;
 	
-	private Amigos seguidores;
+	private List<InfoUsuario> seguidores;
 	
-	private Amigos solicitudesAmistad;
+	private List<InfoUsuario> siguiendo;
+	
+	private List<String> solicitudesAmistad;
 	
 	@DBRef
 	private Personalidad personalidad;
@@ -435,14 +438,14 @@ public class Usuario{
 	/**
 	 * @return the amigos
 	 */
-	public Amigos getAmigos() {
+	public List<InfoUsuario> getAmigos() {
 		return amigos;
 	}
 
 	/**
 	 * @param amigos the amigos to set
 	 */
-	public Usuario setAmigos(Amigos amigos) {
+	public Usuario setAmigos(List<InfoUsuario> amigos) {
 		this.amigos = amigos;
 		return this;
 	}
@@ -450,14 +453,14 @@ public class Usuario{
 	/**
 	 * @return the seguidores
 	 */
-	public Amigos getSeguidores() {
+	public List<InfoUsuario> getSeguidores() {
 		return seguidores;
 	}
 
 	/**
 	 * @param seguidores the seguidores to set
 	 */
-	public Usuario setSeguidores(Amigos seguidores) {
+	public Usuario setSeguidores(List<InfoUsuario> seguidores) {
 		this.seguidores = seguidores;
 		return this;
 	}
@@ -522,20 +525,48 @@ public class Usuario{
 		return this;
 	}
 	
-	
-
 	/**
 	 * @return the solicitudesAmistad
 	 */
-	public Amigos getSolicitudesAmistad() {
+	public List<String> getSolicitudesAmistad() {
 		return solicitudesAmistad;
 	}
 
 	/**
 	 * @param solicitudesAmistad the solicitudesAmistad to set
 	 */
-	public Usuario setSolicitudesAmistad(Amigos solicitudesAmistad) {
+	public Usuario setSolicitudesAmistad(List<String> solicitudesAmistad) {
 		this.solicitudesAmistad = solicitudesAmistad;
+		return this;
+	}
+
+	/**
+	 * @return the siguiendo
+	 */
+	public List<InfoUsuario> getSiguiendo() {
+		return siguiendo;
+	}
+
+	/**
+	 * @param siguiendo the siguiendo to set
+	 */
+	public Usuario setSiguiendo(List<InfoUsuario> siguiendo) {
+		this.siguiendo = siguiendo;
+		return this;
+	}
+	
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public Usuario setGenero(String genero) {
+		this.genero = genero;
 		return this;
 	}
 

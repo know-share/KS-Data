@@ -10,8 +10,11 @@ import org.bson.types.ObjectId;
 
 import com.knowshare.dto.academia.CarreraDTO;
 import com.knowshare.entities.academia.AreaConocimiento;
+import com.knowshare.entities.academia.FormacionAcademica;
+import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
+import com.knowshare.entities.perfilusuario.InfoUsuario;
 import com.knowshare.entities.perfilusuario.Personalidad;
 import com.knowshare.enums.PreferenciaIdeaEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
@@ -67,13 +70,21 @@ public class UsuarioDTO implements Serializable{
 	
 	private Integer cantidadAmigos;
 	
-	private List<String> amigos;
+	private List<InfoUsuario> amigos;
 	
 	private Integer cantidadSeguidores;
 	
-	private List<String> seguidores;
+	private List<InfoUsuario> seguidores;
+	
+	private List<InfoUsuario> siguiendo;
 	
 	private List<String> insignias;
+	
+	private List<String> solicitudesAmistad;
+	
+	private List<TrabajoGrado> tgDirigidos;
+	
+	private List<FormacionAcademica> formacionAcademica;
 	
 	/**
 	 * @return the id
@@ -378,14 +389,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the amigos
 	 */
-	public List<String> getAmigos() {
+	public List<InfoUsuario> getAmigos() {
 		return amigos;
 	}
 
 	/**
 	 * @param amigos the amigos to set
 	 */
-	public UsuarioDTO setAmigos(List<String> amigos) {
+	public UsuarioDTO setAmigos(List<InfoUsuario> amigos) {
 		this.amigos = amigos;
 		return this;
 	}
@@ -408,14 +419,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the seguidores
 	 */
-	public List<String> getSeguidores() {
+	public List<InfoUsuario> getSeguidores() {
 		return seguidores;
 	}
 
 	/**
 	 * @param seguidores the seguidores to set
 	 */
-	public UsuarioDTO setSeguidores(List<String> seguidores) {
+	public UsuarioDTO setSeguidores(List<InfoUsuario> seguidores) {
 		this.seguidores = seguidores;
 		return this;
 	}
@@ -432,6 +443,66 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setInsignias(List<String> insignias) {
 		this.insignias = insignias;
+		return this;
+	}
+
+	/**
+	 * @return the solicitudesAmistad
+	 */
+	public List<String> getSolicitudesAmistad() {
+		return solicitudesAmistad;
+	}
+
+	/**
+	 * @param solicitudesAmistad the solicitudesAmistad to set
+	 */
+	public UsuarioDTO setSolicitudesAmistad(List<String> solicitudesAmistad) {
+		this.solicitudesAmistad = solicitudesAmistad;
+		return this;
+	}
+
+	/**
+	 * @return the tgDirigidos
+	 */
+	public List<TrabajoGrado> getTgDirigidos() {
+		return tgDirigidos;
+	}
+
+	/**
+	 * @param tgDirigidos the tgDirigidos to set
+	 */
+	public UsuarioDTO setTgDirigidos(List<TrabajoGrado> tgDirigidos) {
+		this.tgDirigidos = tgDirigidos;
+		return this;
+	}
+
+	/**
+	 * @return the formacionAcademia
+	 */
+	public List<FormacionAcademica> getFormacionAcademica() {
+		return formacionAcademica;
+	}
+
+	/**
+	 * @param formacionAcademia the formacionAcademia to set
+	 */
+	public UsuarioDTO setFormacionAcademica(List<FormacionAcademica> formacionAcademica) {
+		this.formacionAcademica = formacionAcademica;
+		return this;
+	}
+
+	/**
+	 * @return the siguiendo
+	 */
+	public List<InfoUsuario> getSiguiendo() {
+		return siguiendo;
+	}
+
+	/**
+	 * @param siguiendo the siguiendo to set
+	 */
+	public UsuarioDTO setSiguiendo(List<InfoUsuario> siguiendo) {
+		this.siguiendo = siguiendo;
 		return this;
 	}
 }
