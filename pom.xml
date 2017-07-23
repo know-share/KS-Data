@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.knowshare.data</groupId>
 	<artifactId>KS-Data</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -20,7 +20,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
-        	<artifactId>spring-data-mongodb</artifactId>
+        		<artifactId>spring-data-mongodb</artifactId>
 		</dependency>
 	</dependencies>
 </project>
