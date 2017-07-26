@@ -7,10 +7,14 @@ import java.io.Serializable;
 
 import org.bson.types.ObjectId;
 
+import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.enums.TipoHabilidadEnum;
 
 /**
- * @author miguel
+ * Clase que mapea las principales propiedades de la
+ * entidad {@link HabilidadAval} para ser enviada a
+ * presentación.
+ * @author Miguel Montañez
  *
  */
 public class HabilidadDTO implements Serializable{

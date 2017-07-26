@@ -6,7 +6,10 @@ package com.knowshare.entities.app;
 import com.knowshare.enums.PreferenciaIdeaEnum;
 
 /**
- * @author miguel
+ * Información relacionada con la aplicación, es decir,
+ * preferencias que permiten mostrar cierta información
+ * en pantalla según el tipo.
+ * @author Miguel Montañez
  *
  */
 public class PreferenciasUsuario {

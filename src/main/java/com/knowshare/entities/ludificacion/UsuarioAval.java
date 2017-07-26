@@ -14,7 +14,7 @@ import com.knowshare.enums.TipoAvalEnum;
  * Cada vez que un usuario avala la habilidad o cualidad de
  * otro usuario, se crea un registro que es representado por
  * esta clase.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class UsuarioAval{

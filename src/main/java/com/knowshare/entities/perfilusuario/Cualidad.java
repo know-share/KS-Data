@@ -12,7 +12,7 @@ import com.knowshare.enums.TipoCualidadEnum;
 /**
  * Cualidad que un usuario ha seleccionado como parte de
  * la construccion de su perfil
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "cualidad")

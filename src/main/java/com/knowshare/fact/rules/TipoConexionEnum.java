@@ -4,7 +4,9 @@
 package com.knowshare.fact.rules;
 
 /**
- * @author miguel
+ * Tipos de las conexiones entre usuarios que se
+ * pueden dar.
+ * @author Miguel Montañez
  *
  */
 public enum TipoConexionEnum {

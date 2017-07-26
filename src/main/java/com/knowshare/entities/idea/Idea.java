@@ -18,7 +18,7 @@ import com.knowshare.enums.TipoIdeaEnum;
 /**
  * Representa una idea con su diferente informacion, el id
  * es el que mongo autogenera.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection="idea")

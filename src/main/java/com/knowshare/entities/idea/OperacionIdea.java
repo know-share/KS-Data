@@ -11,7 +11,7 @@ import com.knowshare.enums.TipoOperacionEnum;
  * Sobre una idea se permiten algunas operaciones como
  * compartir y lights. Este registro permite guardar dicha 
  * informacion y quienes hicieron dicho operacion.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class OperacionIdea {

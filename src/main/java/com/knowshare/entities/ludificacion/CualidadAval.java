@@ -11,7 +11,7 @@ import com.knowshare.entities.perfilusuario.Cualidad;
  * Representa las cualidades que posee un usuario,
  * ademas, guarda la cantidad de avales que tiene por cada
  * cualidad.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class CualidadAval{

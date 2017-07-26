@@ -9,7 +9,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * @author miguel
+ * Personalidad que un usuario tiene dado un test, que puede
+ * ser tomado en {@link https://www.16personalities.com/}
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "personalidad")

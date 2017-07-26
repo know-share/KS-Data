@@ -6,7 +6,10 @@ package com.knowshare.entities.perfilusuario;
 import java.io.Serializable;
 
 /**
- * @author miguel
+ * Subdocumento que reune información de un usuario, 
+ * de forma sencilla para poder mostrar e identificar
+ * a un usuario en la aplicación.
+ * @author Miguel Montañez
  *
  */
 public class InfoUsuario implements Serializable{

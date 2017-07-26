@@ -6,8 +6,14 @@ package com.knowshare.dto.academia;
 import java.io.Serializable;
 import java.util.List;
 
+import com.knowshare.entities.academia.AreaConocimiento;
+import com.knowshare.entities.perfilusuario.Enfasis;
+
 /**
- * @author miguel
+ * Clase que reune la lista de nombres de {@link Enfasis} y 
+ * {@link AreaConocimiento}, con el fin de enviar a
+ * presentación
+ * @author Miguel Montañez
  *
  */
 public class EnfasisAreaConocimientoDTO implements Serializable{

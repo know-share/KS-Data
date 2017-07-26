@@ -6,8 +6,12 @@ package com.knowshare.dto.academia;
 import java.io.Serializable;
 import java.util.List;
 
+import com.knowshare.entities.academia.Carrera;
+
 /**
- * @author miguel
+ * Clase que es mapeada de la entidad {@link Carrera} para
+ * enviar del servidor al cliente.
+ * @author Miguel Montañez
  *
  */
 public class CarreraDTO implements Serializable {

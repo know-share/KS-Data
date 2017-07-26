@@ -4,7 +4,8 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Clasificación de los gustos mostrados por la aplicación
+ * @author Miguel Montañez
  *
  */
 public enum TipoGustoEnum {

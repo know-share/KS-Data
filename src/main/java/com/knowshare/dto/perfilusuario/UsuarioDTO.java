@@ -16,11 +16,14 @@ import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
 import com.knowshare.entities.perfilusuario.InfoUsuario;
 import com.knowshare.entities.perfilusuario.Personalidad;
+import com.knowshare.entities.perfilusuario.Usuario;
 import com.knowshare.enums.PreferenciaIdeaEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
 
 /**
- * @author miguel
+ * Clase que mapea las principales propiedades de la
+ * entidad {@link Usuario} para ser enviada a presentación.
+ * @author Miguel Montañez
  *
  */
 public class UsuarioDTO implements Serializable{

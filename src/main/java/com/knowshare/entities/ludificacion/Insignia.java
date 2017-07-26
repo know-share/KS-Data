@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Representa las insignias que se otorgan en la aplicacion.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "insignia")

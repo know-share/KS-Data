@@ -11,7 +11,7 @@ import com.knowshare.entities.perfilusuario.Habilidad;
  * Representa las habilidades que posee un usuario,
  * ademas, guarda la cantidad de avales que tiene por cada
  * habilidad.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class HabilidadAval {

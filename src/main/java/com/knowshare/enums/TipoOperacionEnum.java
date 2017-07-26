@@ -4,7 +4,8 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Operaciones permitidas sobre una {@link Idea}
+ * @author Miguel Montañez
  *
  */
 public enum TipoOperacionEnum {

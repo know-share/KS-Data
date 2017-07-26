@@ -7,11 +7,14 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
+import com.knowshare.entities.idea.Idea;
 import com.knowshare.entities.idea.Tag;
 import com.knowshare.enums.TipoIdeaEnum;
 
 /**
- * @author pablo
+ * Clase que es enviada de cliente a servidor y viceversa
+ * que mapea las propiedades principales de {@link Idea}
+ * @author Pablo Gaitan
  *
  */
 public class IdeaDTO {

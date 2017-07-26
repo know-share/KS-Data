@@ -4,7 +4,9 @@
 package com.knowshare.fact.rules;
 
 /**
- * @author miguel
+ * Entidad que el motor de reglas reconoce y hace uso
+ * para leer la información y poder aplicar la regla.
+ * @author Miguel Montañez
  *
  */
 public class UsuarioFact {

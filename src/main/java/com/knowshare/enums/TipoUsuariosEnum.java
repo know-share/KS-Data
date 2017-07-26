@@ -1,7 +1,8 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Tipo de usuarios que la aplicación soporta.
+ * @author Miguel Montañez
  *
  */
 public enum TipoUsuariosEnum {

@@ -26,7 +26,7 @@ import com.knowshare.enums.TipoUsuariosEnum;
 
 /**
  * Representa la informacion de un usuario dentro de la aplicacion
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "usuario")

@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Trabajos de grado que un profesor o egresado ha 
  * realizado o dirigido
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "trabajo_grado")

@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Representa las carreras que un estudiante puede estar cursando.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "carrera")
