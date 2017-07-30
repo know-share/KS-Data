@@ -5,8 +5,6 @@ package com.knowshare.dto.idea;
 
 import java.util.List;
 
-import org.bson.types.ObjectId;
-
 import com.knowshare.entities.idea.Idea;
 import com.knowshare.entities.idea.Tag;
 import com.knowshare.enums.TipoIdeaEnum;

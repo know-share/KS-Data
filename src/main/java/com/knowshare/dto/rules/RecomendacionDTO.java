@@ -24,6 +24,8 @@ public class RecomendacionDTO implements Serializable{
 	
 	private String nombre;
 	
+	private String carrera;
+	
 	private TipoConexionEnum conexion;
 
 	/**
@@ -53,6 +55,21 @@ public class RecomendacionDTO implements Serializable{
 	 */
 	public RecomendacionDTO setNombre(String nombre) {
 		this.nombre = nombre;
+		return this;
+	}
+
+	/**
+	 * @return the carrera
+	 */
+	public String getCarrera() {
+		return carrera;
+	}
+
+	/**
+	 * @param carrera the carrera to set
+	 */
+	public RecomendacionDTO setCarrera(String carrera) {
+		this.carrera = carrera;
 		return this;
 	}
 
