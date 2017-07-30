@@ -25,7 +25,7 @@ import com.knowshare.enums.TipoIdeaEnum;
 public class Idea {
 
 	@Id
-	private ObjectId id;
+	private String id;
 	
 	private String contenido;
 	
@@ -58,6 +58,10 @@ public class Idea {
 	@DBRef
 	private List<Tag> tags;
 	
+	private boolean compartida;
+	
+	private String usuarioOriginal;
+	
 	public Idea(){
 		operaciones = new ArrayList<>();
 		tags = new ArrayList<>();
@@ -68,14 +72,14 @@ public class Idea {
 	/**
 	 * @return the id
 	 */
-	public ObjectId getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public Idea setId(ObjectId id) {
+	public Idea setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -289,4 +293,36 @@ public class Idea {
 		this.tags = tags;
 		return this;
 	}
+
+	/**
+	 * @return the compartida
+	 */
+	public boolean isCompartida() {
+		return compartida;
+	}
+
+	/**
+	 * @param compartida the compartida to set
+	 */
+	public Idea setCompartida(boolean compartida) {
+		this.compartida = compartida;
+		return this;
+	}
+
+	/**
+	 * @return the usuarioOriginal
+	 */
+	public String getUsuarioOriginal() {
+		return usuarioOriginal;
+	}
+
+	/**
+	 * @param usuarioOriginal the usuarioOriginal to set
+	 */
+	public Idea setUsuarioOriginal(String usuarioOriginal) {
+		this.usuarioOriginal = usuarioOriginal;
+		return this;
+	}
+	
+	
 }

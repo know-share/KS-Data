@@ -19,7 +19,7 @@ import com.knowshare.enums.TipoIdeaEnum;
  */
 public class IdeaDTO {
 	
-	private ObjectId id;
+	private String id;
 	
 	private String contenido;
 	
@@ -44,19 +44,21 @@ public class IdeaDTO {
 	private Long comentarios;
 	
 	private List<Tag> tags;
+	
+	private boolean isLight;
 
 	
 	/**
 	 * @return the id
 	 */
-	public ObjectId getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public IdeaDTO setId(ObjectId id) {
+	public IdeaDTO setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -241,4 +243,17 @@ public class IdeaDTO {
 		return this;
 	}
 
+	/**
+	 * @return the isLight
+	 */
+	public boolean isIsLight() {
+		return isLight;
+	}
+
+	/**
+	 * @param isLight the isLight to set
+	 */
+	public void setIsLight(boolean isLight) {
+		this.isLight = isLight;
+	}
 }
