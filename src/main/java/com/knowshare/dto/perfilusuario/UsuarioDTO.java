@@ -45,6 +45,10 @@ public class UsuarioDTO implements Serializable{
 	
 	private String username;
 	
+	private String genero;
+	
+	private String grupoInvestigacion;
+	
 	private TipoUsuariosEnum tipoUsuario;
 	
 	private CarreraDTO carrera;
@@ -506,6 +510,36 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setSiguiendo(List<InfoUsuario> siguiendo) {
 		this.siguiendo = siguiendo;
+		return this;
+	}
+
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public UsuarioDTO setGenero(String genero) {
+		this.genero = genero;
+		return this;
+	}
+
+	/**
+	 * @return the grupoInvestigacion
+	 */
+	public String getGrupoInvestigacion() {
+		return grupoInvestigacion;
+	}
+
+	/**
+	 * @param grupoInvestigacion the grupoInvestigacion to set
+	 */
+	public UsuarioDTO setGrupoInvestigacion(String grupoInvestigacion) {
+		this.grupoInvestigacion = grupoInvestigacion;
 		return this;
 	}
 }

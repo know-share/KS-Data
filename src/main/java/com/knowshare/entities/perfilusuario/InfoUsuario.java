@@ -22,6 +22,8 @@ public class InfoUsuario implements Serializable{
 	private String username;
 	
 	private String nombre;
+	
+	private String carrera;
 
 	/**
 	 * @return the username
@@ -53,6 +55,21 @@ public class InfoUsuario implements Serializable{
 		return this;
 	}
 	
+	/**
+	 * @return the carrera
+	 */
+	public String getCarrera() {
+		return carrera;
+	}
+
+	/**
+	 * @param carrera the carrera to set
+	 */
+	public InfoUsuario setCarrera(String carrera) {
+		this.carrera = carrera;
+		return this;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
