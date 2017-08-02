@@ -44,8 +44,40 @@ public class IdeaDTO {
 	private List<Tag> tags;
 	
 	private boolean isLight;
+	
+	private boolean compartida;
+	
+	private String usuarioOriginal;
 
 	
+	/**
+	 * @return the compartida
+	 */
+	public boolean isCompartida() {
+		return compartida;
+	}
+
+	/**
+	 * @param compartida the compartida to set
+	 */
+	public void setCompartida(boolean compartida) {
+		this.compartida = compartida;
+	}
+
+	/**
+	 * @return the usuarioOriginal
+	 */
+	public String getUsuarioOriginal() {
+		return usuarioOriginal;
+	}
+
+	/**
+	 * @param usuarioOriginal the usuarioOriginal to set
+	 */
+	public void setUsuarioOriginal(String usuarioOriginal) {
+		this.usuarioOriginal = usuarioOriginal;
+	}
+
 	/**
 	 * @return the id
 	 */
