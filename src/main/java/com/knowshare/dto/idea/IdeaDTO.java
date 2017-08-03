@@ -3,6 +3,7 @@
  */
 package com.knowshare.dto.idea;
 
+import java.util.Date;
 import java.util.List;
 
 import com.knowshare.entities.idea.Idea;
@@ -48,8 +49,24 @@ public class IdeaDTO {
 	private boolean compartida;
 	
 	private String usuarioOriginal;
+	
+	private Date fechaCreacion;
 
 	
+	/**
+	 * @return the fechaCreacion
+	 */
+	public Date getFechaCreacion() {
+		return fechaCreacion;
+	}
+
+	/**
+	 * @param fechaCreacion the fechaCreacion to set
+	 */
+	public void setFechaCreacion(Date fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
+
 	/**
 	 * @return the compartida
 	 */
