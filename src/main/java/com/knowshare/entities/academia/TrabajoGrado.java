@@ -4,7 +4,6 @@
 package com.knowshare.entities.academia;
 
 import java.io.Serializable;
-import java.util.List;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
