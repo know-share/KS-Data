@@ -5,6 +5,7 @@ package com.knowshare.dto.rules;
 
 import java.io.Serializable;
 
+import com.knowshare.enums.TipoUsuariosEnum;
 import com.knowshare.fact.rules.TipoConexionEnum;
 
 /**
@@ -25,6 +26,10 @@ public class RecomendacionDTO implements Serializable{
 	private String nombre;
 	
 	private String carrera;
+	
+	private Double porcentaje;
+	
+	private TipoUsuariosEnum tipoUsuario;
 	
 	private TipoConexionEnum conexion;
 
@@ -85,6 +90,36 @@ public class RecomendacionDTO implements Serializable{
 	 */
 	public RecomendacionDTO setConexion(TipoConexionEnum conexion) {
 		this.conexion = conexion;
+		return this;
+	}
+
+	/**
+	 * @return the porcentaje
+	 */
+	public Double getPorcentaje() {
+		return porcentaje;
+	}
+
+	/**
+	 * @param porcentaje the porcentaje to set
+	 */
+	public RecomendacionDTO setPorcentaje(Double porcentaje) {
+		this.porcentaje = porcentaje;
+		return this;
+	}
+
+	/**
+	 * @return the tipoUsuario
+	 */
+	public TipoUsuariosEnum getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	/**
+	 * @param tipoUsuario the tipoUsuario to set
+	 */
+	public RecomendacionDTO setTipoUsuario(TipoUsuariosEnum tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 		return this;
 	}
 }
