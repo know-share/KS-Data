@@ -93,6 +93,8 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<FormacionAcademica> formacionAcademica;
 	
+	private Boolean imagen;
+	
 	/**
 	 * @return the id
 	 */
@@ -540,6 +542,21 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setGrupoInvestigacion(String grupoInvestigacion) {
 		this.grupoInvestigacion = grupoInvestigacion;
+		return this;
+	}
+
+	/**
+	 * @return the imagenUri
+	 */
+	public Boolean isImagen() {
+		return imagen;
+	}
+
+	/**
+	 * @param imagenUri the imagenUri to set
+	 */
+	public UsuarioDTO setImagen(Boolean imagen) {
+		this.imagen = imagen;
 		return this;
 	}
 }
