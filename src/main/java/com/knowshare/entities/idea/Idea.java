@@ -62,6 +62,7 @@ public class Idea {
 	private String usuarioOriginal;
 	
 	public Idea(){
+		ideasProyecto = new ArrayList<>();
 		operaciones = new ArrayList<>();
 		tags = new ArrayList<>();
 		lights = new Long(0);
