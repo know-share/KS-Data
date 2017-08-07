@@ -24,6 +24,8 @@ public class InfoUsuario implements Serializable{
 	private String nombre;
 	
 	private String carrera;
+	
+	private String genero;
 
 	/**
 	 * @return the username
@@ -75,10 +77,10 @@ public class InfoUsuario implements Serializable{
 	 */
 	@Override
 	public int hashCode() {
-		final int prime = 31;
+		final int PRIME = 31;
 		int result = 1;
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
+		result = PRIME * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = PRIME * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
@@ -94,9 +96,8 @@ public class InfoUsuario implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		InfoUsuario other = (InfoUsuario) obj;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
+		if (nombre == null && other.nombre != null) {
+			return false;
 		}
 		if (username == null) {
 			if (other.username != null)
@@ -104,6 +105,21 @@ public class InfoUsuario implements Serializable{
 		} else if (!username.equals(other.username))
 			return false;
 		return true;
+	}
+
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public InfoUsuario setGenero(String genero) {
+		this.genero = genero;
+		return this;
 	}
 
 	public boolean equals(String usuario){

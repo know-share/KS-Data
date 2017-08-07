@@ -17,12 +17,29 @@ import com.knowshare.entities.academia.Carrera;
 public class CarreraDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
+	private String id;
 
 	private String nombre;
 	
 	private String facultad;
 	
 	private List<String> carrerasAfines;
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public CarreraDTO setId(String id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre

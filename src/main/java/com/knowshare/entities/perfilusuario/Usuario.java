@@ -104,6 +104,8 @@ public class Usuario{
 	private Personalidad personalidad;
 	
 	private PreferenciasUsuario preferencias;
+	
+	private ImageProfile imagen;
 
 	/**
 	 * @return the id
@@ -575,8 +577,20 @@ public class Usuario{
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		if(obj != null && this.id.equals(((Usuario)obj).getId()))
-			return true;
-		return false;
+		return (obj != null && this.id.equals(((Usuario)obj).getId()));
+	}
+
+	/**
+	 * @return the imagen
+	 */
+	public ImageProfile getImagen() {
+		return imagen;
+	}
+
+	/**
+	 * @param imagen the imagen to set
+	 */
+	public void setImagen(ImageProfile imagen) {
+		this.imagen = imagen;
 	}
 }
