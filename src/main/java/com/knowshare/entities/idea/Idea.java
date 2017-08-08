@@ -11,6 +11,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.perfilusuario.Usuario;
 import com.knowshare.enums.TipoIdeaEnum;
 
@@ -61,6 +62,23 @@ public class Idea {
 	
 	private String usuarioOriginal;
 	
+	private TrabajoGrado tg;
+	
+	
+	/**
+	 * @return the tg
+	 */
+	public TrabajoGrado getTg() {
+		return tg;
+	}
+
+	/**
+	 * @param tg the tg to set
+	 */
+	public void setTg(TrabajoGrado tg) {
+		this.tg = tg;
+	}
+
 	public Idea(){
 		ideasProyecto = new ArrayList<>();
 		operaciones = new ArrayList<>();

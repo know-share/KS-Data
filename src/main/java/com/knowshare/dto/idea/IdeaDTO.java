@@ -6,6 +6,7 @@ package com.knowshare.dto.idea;
 import java.util.Date;
 import java.util.List;
 
+import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.idea.Idea;
 import com.knowshare.entities.idea.Tag;
 import com.knowshare.enums.TipoIdeaEnum;
@@ -51,8 +52,24 @@ public class IdeaDTO {
 	private String usuarioOriginal;
 	
 	private Date fechaCreacion;
+	
+	private TrabajoGrado tg;
 
 	
+	/**
+	 * @return the tg
+	 */
+	public TrabajoGrado getTg() {
+		return tg;
+	}
+
+	/**
+	 * @param tg the tg to set
+	 */
+	public void setTg(TrabajoGrado tg) {
+		this.tg = tg;
+	}
+
 	/**
 	 * @return the fechaCreacion
 	 */
