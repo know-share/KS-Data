@@ -62,6 +62,7 @@ public class Idea {
 	
 	private String usuarioOriginal;
 	
+	@DBRef
 	private TrabajoGrado tg;
 	
 	
