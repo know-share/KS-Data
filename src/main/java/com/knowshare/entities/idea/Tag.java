@@ -16,6 +16,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Tag {
 	
 	@Id
+	private String id;
+	
 	private String nombre;
 
 	/**
@@ -32,4 +34,14 @@ public class Tag {
 		this.nombre = nombre;
 		return this;
 	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public Tag setId(String id) {
+		this.id = id;
+		return this;
+	}
+	
 }
