@@ -35,10 +35,16 @@ public class Tag {
 		return this;
 	}
 	
+	/**
+	 * @return the id
+	 */
 	public String getId() {
 		return id;
 	}
 	
+	/**
+	 * @param id the id to set
+	 */
 	public Tag setId(String id) {
 		this.id = id;
 		return this;
