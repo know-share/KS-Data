@@ -33,6 +33,8 @@ public class HabilidadDTO implements Serializable{
 	private String carrera;
 	
 	private Integer avales;
+	
+	private String IdCarrera;
 
 	/**
 	 * @return the id
@@ -108,4 +110,20 @@ public class HabilidadDTO implements Serializable{
 		this.avales = avales;
 		return this;
 	}
+
+	/**
+	 * @return the idCarrera
+	 */
+	public String getIdCarrera() {
+		return IdCarrera;
+	}
+
+	/**
+	 * @param idCarrera the idCarrera to set
+	 */
+	public void setIdCarrera(String idCarrera) {
+		IdCarrera = idCarrera;
+	}
+	
+	
 }
