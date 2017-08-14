@@ -3,20 +3,23 @@
  */
 package com.knowshare.dto.idea;
 
+import java.util.Date;
 import java.util.List;
 
-import org.bson.types.ObjectId;
-
+import com.knowshare.entities.academia.TrabajoGrado;
+import com.knowshare.entities.idea.Idea;
 import com.knowshare.entities.idea.Tag;
 import com.knowshare.enums.TipoIdeaEnum;
 
 /**
- * @author pablo
+ * Clase que es enviada de cliente a servidor y viceversa
+ * que mapea las propiedades principales de {@link Idea}
+ * @author Pablo Gaitan
  *
  */
 public class IdeaDTO {
 	
-	private ObjectId id;
+	private String id;
 	
 	private String contenido;
 	
@@ -41,19 +44,85 @@ public class IdeaDTO {
 	private Long comentarios;
 	
 	private List<Tag> tags;
+	
+	private boolean isLight;
+	
+	private boolean compartida;
+	
+	private String usuarioOriginal;
+	
+	private Date fechaCreacion;
+	
+	private TrabajoGrado tg;
 
 	
 	/**
+	 * @return the tg
+	 */
+	public TrabajoGrado getTg() {
+		return tg;
+	}
+
+	/**
+	 * @param tg the tg to set
+	 */
+	public void setTg(TrabajoGrado tg) {
+		this.tg = tg;
+	}
+
+	/**
+	 * @return the fechaCreacion
+	 */
+	public Date getFechaCreacion() {
+		return fechaCreacion;
+	}
+
+	/**
+	 * @param fechaCreacion the fechaCreacion to set
+	 */
+	public void setFechaCreacion(Date fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
+
+	/**
+	 * @return the compartida
+	 */
+	public boolean isCompartida() {
+		return compartida;
+	}
+
+	/**
+	 * @param compartida the compartida to set
+	 */
+	public void setCompartida(boolean compartida) {
+		this.compartida = compartida;
+	}
+
+	/**
+	 * @return the usuarioOriginal
+	 */
+	public String getUsuarioOriginal() {
+		return usuarioOriginal;
+	}
+
+	/**
+	 * @param usuarioOriginal the usuarioOriginal to set
+	 */
+	public void setUsuarioOriginal(String usuarioOriginal) {
+		this.usuarioOriginal = usuarioOriginal;
+	}
+
+	/**
 	 * @return the id
 	 */
-	public ObjectId getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public IdeaDTO setId(ObjectId id) {
+	public IdeaDTO setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -238,4 +307,17 @@ public class IdeaDTO {
 		return this;
 	}
 
+	/**
+	 * @return the isLight
+	 */
+	public boolean isIsLight() {
+		return isLight;
+	}
+
+	/**
+	 * @param isLight the isLight to set
+	 */
+	public void setIsLight(boolean isLight) {
+		this.isLight = isLight;
+	}
 }

@@ -9,13 +9,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Una coleccion basica que guarda los tags que seran 
  * usadas en la aplicacion para la creacion de ideas.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection="tag")
 public class Tag {
 	
 	@Id
+	private String id;
+	
 	private String nombre;
 
 	/**
@@ -32,4 +34,20 @@ public class Tag {
 		this.nombre = nombre;
 		return this;
 	}
+	
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+	
+	/**
+	 * @param id the id to set
+	 */
+	public Tag setId(String id) {
+		this.id = id;
+		return this;
+	}
+	
 }

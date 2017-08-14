@@ -4,7 +4,6 @@
 package com.knowshare.entities.academia;
 
 import java.io.Serializable;
-import java.util.List;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -13,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Trabajos de grado que un profesor o egresado ha 
  * realizado o dirigido
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "trabajo_grado")
@@ -35,8 +34,6 @@ public class TrabajoGrado implements Serializable{
 	
 	private Integer numEstudiantes;
 	
-	//Tags
-	private List<String> descripción;
 
 	/**
 	 * @return the id
@@ -98,21 +95,7 @@ public class TrabajoGrado implements Serializable{
 		return this;
 	}
 
-	/**
-	 * @return the descripción
-	 */
-	public List<String> getDescripción() {
-		return descripción;
-	}
-
-	/**
-	 * @param descripción the descripción to set
-	 */
-	public TrabajoGrado setDescripción(List<String> descripción) {
-		this.descripción = descripción;
-		return this;
-	}
-
+	
 	/**
 	 * @return the numEstudiantes
 	 */

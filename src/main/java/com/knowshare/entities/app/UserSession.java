@@ -8,6 +8,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
+ * Entidad que guarda la sesión que un usuario tiene,
+ * es decir, cada vez que ingresa a la aplicación, se registra
+ * el momento en que lo hizo, además, en el momento de cerrar
+ * sesión se borra.
+ * Entidad que permite saber si un usuario aún está en
+ * la aplicación después de un tiempo determinado.
  * @author Pablo Gaitan
  *
  */

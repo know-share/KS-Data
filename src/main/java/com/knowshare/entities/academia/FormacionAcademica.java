@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Esta clase es un documento embebido por cada usuario que 
  * da a conocer la formacion academica de un usuario
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class FormacionAcademica implements Serializable{

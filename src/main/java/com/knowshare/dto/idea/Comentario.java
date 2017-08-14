@@ -3,7 +3,11 @@
  */
 package com.knowshare.dto.idea;
 
+import com.knowshare.entities.idea.Idea;
+
 /**
+ * Representa el comentario que viene desde presentación
+ * para luego ser mapeado a la entidad {@link Idea}
  * @author Pablo Gaitan
  *
  */

@@ -14,7 +14,7 @@ import com.knowshare.enums.TipoGustoEnum;
 /**
  * Gustos que un usuario puede tener dentro de la aplicacion para
  * completar la informacion de su perfil
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "gusto")

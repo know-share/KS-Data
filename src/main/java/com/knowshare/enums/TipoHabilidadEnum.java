@@ -4,7 +4,8 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Habilidades que un usuario puede tener.
+ * @author Miguel Montañez
  *
  */
 public enum TipoHabilidadEnum {

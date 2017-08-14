@@ -4,7 +4,9 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Relaciones entre cada personalidad que se describen en 
+ * un documento.
+ * @author Miguel Montañez
  *
  */
 public enum TipoRelacionesPersonalidadEnum {

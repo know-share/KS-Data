@@ -7,10 +7,14 @@ import java.io.Serializable;
 
 import org.bson.types.ObjectId;
 
+import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.enums.TipoHabilidadEnum;
 
 /**
- * @author miguel
+ * Clase que mapea las principales propiedades de la
+ * entidad {@link HabilidadAval} para ser enviada a
+ * presentación.
+ * @author Miguel Montañez
  *
  */
 public class HabilidadDTO implements Serializable{
@@ -29,6 +33,8 @@ public class HabilidadDTO implements Serializable{
 	private String carrera;
 	
 	private Integer avales;
+	
+	private String IdCarrera;
 
 	/**
 	 * @return the id
@@ -104,4 +110,20 @@ public class HabilidadDTO implements Serializable{
 		this.avales = avales;
 		return this;
 	}
+
+	/**
+	 * @return the idCarrera
+	 */
+	public String getIdCarrera() {
+		return IdCarrera;
+	}
+
+	/**
+	 * @param idCarrera the idCarrera to set
+	 */
+	public void setIdCarrera(String idCarrera) {
+		IdCarrera = idCarrera;
+	}
+	
+	
 }

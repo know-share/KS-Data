@@ -4,7 +4,8 @@
 package com.knowshare.enums;
 
 /**
- * @author miguel
+ * Las cualidades que puede tener un profesor.
+ * @author Miguel Montañez
  *
  */
 public enum TipoCualidadEnum {

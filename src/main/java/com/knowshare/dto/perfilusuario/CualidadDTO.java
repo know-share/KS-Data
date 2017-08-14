@@ -7,10 +7,14 @@ import java.io.Serializable;
 
 import org.bson.types.ObjectId;
 
+import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.enums.TipoCualidadEnum;
 
 /**
- * @author miguel
+ * Clase que mapea las principales propiedades de la 
+ * entidad {@link CualidadAval} para ser enviada al
+ * cliente.
+ * @author Miguel Montañez
  *
  */
 public class CualidadDTO implements Serializable {

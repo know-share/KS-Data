@@ -6,19 +6,42 @@ package com.knowshare.dto.academia;
 import java.io.Serializable;
 import java.util.List;
 
+import com.knowshare.entities.academia.Carrera;
+
 /**
- * @author miguel
+ * Clase que es mapeada de la entidad {@link Carrera} para
+ * enviar del servidor al cliente.
+ * @author Miguel Montañez
  *
  */
 public class CarreraDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
+	private String id;
 
 	private String nombre;
 	
 	private String facultad;
 	
 	private List<String> carrerasAfines;
+	
+	private List<String> enfasis;
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public CarreraDTO setId(String id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre
@@ -64,4 +87,21 @@ public class CarreraDTO implements Serializable {
 		this.carrerasAfines = carrerasAfines;
 		return this;
 	}
+
+	/**
+	 * @return the enfasis
+	 */
+	public List<String> getEnfasis() {
+		return enfasis;
+	}
+
+	/**
+	 * @param enfasis the enfasis to set
+	 */
+	public  CarreraDTO  setEnfasis(List<String> enfasis) {
+		this.enfasis = enfasis;
+		return this;
+	}
+	
+	
 }

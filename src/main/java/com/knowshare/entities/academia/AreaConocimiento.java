@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Ya que cada carrera cuenta con diversos enfasis, este
  * documento representa dichos enfasis.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public class AreaConocimiento implements Serializable{

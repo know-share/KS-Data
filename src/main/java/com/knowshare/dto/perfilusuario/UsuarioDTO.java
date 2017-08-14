@@ -16,11 +16,14 @@ import com.knowshare.entities.perfilusuario.Enfasis;
 import com.knowshare.entities.perfilusuario.Gusto;
 import com.knowshare.entities.perfilusuario.InfoUsuario;
 import com.knowshare.entities.perfilusuario.Personalidad;
+import com.knowshare.entities.perfilusuario.Usuario;
 import com.knowshare.enums.PreferenciaIdeaEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
 
 /**
- * @author miguel
+ * Clase que mapea las principales propiedades de la
+ * entidad {@link Usuario} para ser enviada a presentación.
+ * @author Miguel Montañez
  *
  */
 public class UsuarioDTO implements Serializable{
@@ -41,6 +44,10 @@ public class UsuarioDTO implements Serializable{
 	private String password;
 	
 	private String username;
+	
+	private String genero;
+	
+	private String grupoInvestigacion;
 	
 	private TipoUsuariosEnum tipoUsuario;
 	
@@ -85,6 +92,8 @@ public class UsuarioDTO implements Serializable{
 	private List<TrabajoGrado> tgDirigidos;
 	
 	private List<FormacionAcademica> formacionAcademica;
+	
+	private Boolean imagen;
 	
 	/**
 	 * @return the id
@@ -503,6 +512,51 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setSiguiendo(List<InfoUsuario> siguiendo) {
 		this.siguiendo = siguiendo;
+		return this;
+	}
+
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public UsuarioDTO setGenero(String genero) {
+		this.genero = genero;
+		return this;
+	}
+
+	/**
+	 * @return the grupoInvestigacion
+	 */
+	public String getGrupoInvestigacion() {
+		return grupoInvestigacion;
+	}
+
+	/**
+	 * @param grupoInvestigacion the grupoInvestigacion to set
+	 */
+	public UsuarioDTO setGrupoInvestigacion(String grupoInvestigacion) {
+		this.grupoInvestigacion = grupoInvestigacion;
+		return this;
+	}
+
+	/**
+	 * @return the imagenUri
+	 */
+	public Boolean isImagen() {
+		return imagen;
+	}
+
+	/**
+	 * @param imagenUri the imagenUri to set
+	 */
+	public UsuarioDTO setImagen(Boolean imagen) {
+		this.imagen = imagen;
 		return this;
 	}
 }

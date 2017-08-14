@@ -11,13 +11,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Representa las carreras que un estudiante puede estar cursando.
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 @Document(collection = "carrera")
 public class Carrera {
 	
 	@Id
+	private String id;
+	
 	private String nombre;
 	
 	private String facultad;
@@ -28,6 +30,21 @@ public class Carrera {
 	private List<String> enfasis;
 	
 	private List<String> areaConocimiento;
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public Carrera setId(String id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre

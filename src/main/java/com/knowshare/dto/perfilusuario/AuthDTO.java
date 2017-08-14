@@ -6,7 +6,11 @@ package com.knowshare.dto.perfilusuario;
 import java.io.Serializable;
 
 /**
- * @author pablo
+ * Información que es enviada en el momento de la autenticación
+ * de un usuario frente a la aplicación. La contraseña viaja
+ * en texto plano, por lo que se requiere un canal seguro entre
+ * cliente y servidor.
+ * @author Pablo Gaitan
  *
  */
 public class AuthDTO implements Serializable{
