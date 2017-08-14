@@ -25,6 +25,8 @@ public class CarreraDTO implements Serializable {
 	private String facultad;
 	
 	private List<String> carrerasAfines;
+	
+	private List<String> enfasis;
 
 	/**
 	 * @return the id
@@ -85,4 +87,21 @@ public class CarreraDTO implements Serializable {
 		this.carrerasAfines = carrerasAfines;
 		return this;
 	}
+
+	/**
+	 * @return the enfasis
+	 */
+	public List<String> getEnfasis() {
+		return enfasis;
+	}
+
+	/**
+	 * @param enfasis the enfasis to set
+	 */
+	public  CarreraDTO  setEnfasis(List<String> enfasis) {
+		this.enfasis = enfasis;
+		return this;
+	}
+	
+	
 }
