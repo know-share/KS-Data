@@ -19,7 +19,7 @@ import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.app.PreferenciasUsuario;
 import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
-import com.knowshare.entities.ludificacion.Insignia;
+import com.knowshare.entities.ludificacion.InsigniaPreview;
 import com.knowshare.entities.ludificacion.UsuarioAval;
 import com.knowshare.enums.TipoProfesorEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
@@ -83,8 +83,7 @@ public class Usuario{
 	
 	private List<CualidadAval> cualidadesProfesor;
 	
-	@DBRef
-	private List<Insignia> insignias;
+	private List<InsigniaPreview> insignias;
 	
 	@DBRef(lazy = true)
 	private List<TrabajoGrado> trabajosGrado;
@@ -395,14 +394,14 @@ public class Usuario{
 	/**
 	 * @return the insignias
 	 */
-	public List<Insignia> getInsignias() {
+	public List<InsigniaPreview> getInsignias() {
 		return insignias;
 	}
 
 	/**
 	 * @param insignias the insignias to set
 	 */
-	public Usuario setInsignias(List<Insignia> insignias) {
+	public Usuario setInsignias(List<InsigniaPreview> insignias) {
 		this.insignias = insignias;
 		return this;
 	}

@@ -15,11 +15,28 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Insignia {
 	
 	@Id
+	private String id;
+	
 	private String nombre;
 	
 	private String descripcion;
 	
 	private String iconoRef;
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public Insignia setId(String id) {
+		this.id = id;
+		return this;
+	}
 
 	/**
 	 * @return the nombre
