@@ -49,7 +49,7 @@ public class Usuario{
 	@Indexed(unique=true)
 	private String correo;
 	
-	private Date fechaNacimiento;
+	private Date fechaRegistro;
 	
 	private TipoUsuariosEnum tipo;
 	
@@ -184,15 +184,15 @@ public class Usuario{
 	/**
 	 * @return the fechaNacimiento
 	 */
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+	public Date getFechaRegistro() {
+		return fechaRegistro;
 	}
 
 	/**
 	 * @param fechaNacimiento the fechaNacimiento to set
 	 */
-	public Usuario setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public Usuario setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
 		return this;
 	}
 
