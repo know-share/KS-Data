@@ -50,6 +50,8 @@ public class UsuarioDTO implements Serializable{
 	
 	private String grupoInvestigacion;
 	
+	private Boolean disponible;
+	
 	private TipoUsuariosEnum tipoUsuario;
 	
 	private CarreraDTO carrera;
@@ -116,6 +118,21 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public String getNombre() {
 		return nombre;
+	}
+	
+	/**
+	 * @return the disponible
+	 */
+	public Boolean isDisponible() {
+		return disponible;
+	}
+
+	/**
+	 * @param disponible the disponible to set
+	 */
+	public UsuarioDTO setDisponible(Boolean disponible) {
+		this.disponible = disponible;
+		return this;
 	}
 
 	/**

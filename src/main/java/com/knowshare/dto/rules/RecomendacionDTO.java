@@ -27,6 +27,8 @@ public class RecomendacionDTO implements Serializable{
 	
 	private String carrera;
 	
+	private String genero;
+	
 	private Double porcentaje;
 	
 	private TipoUsuariosEnum tipoUsuario;
@@ -45,6 +47,21 @@ public class RecomendacionDTO implements Serializable{
 	 */
 	public RecomendacionDTO setUsername(String username) {
 		this.username = username;
+		return this;
+	}
+
+	/**
+	 * @return the genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero the genero to set
+	 */
+	public RecomendacionDTO setGenero(String genero) {
+		this.genero = genero;
 		return this;
 	}
 

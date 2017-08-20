@@ -57,7 +57,7 @@ public class Usuario{
 	
 	private TipoProfesorEnum tipoProfesor;
 	
-	private String disponibilidad;
+	private Boolean disponible;
 	
 	private String estado;
 	
@@ -244,15 +244,15 @@ public class Usuario{
 	/**
 	 * @return the disponibilidad
 	 */
-	public String getDisponibilidad() {
-		return disponibilidad;
+	public Boolean isDisponible() {
+		return disponible;
 	}
 
 	/**
 	 * @param disponibilidad the disponibilidad to set
 	 */
-	public Usuario setDisponibilidad(String disponibilidad) {
-		this.disponibilidad = disponibilidad;
+	public Usuario setDisponible(Boolean disponible) {
+		this.disponible = disponible;
 		return this;
 	}
 
