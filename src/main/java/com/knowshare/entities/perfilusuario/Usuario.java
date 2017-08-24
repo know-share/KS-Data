@@ -576,8 +576,12 @@ public class Usuario{
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return (obj != null && this.id.equals(((Usuario)obj).getId()));
-	}
+		if(obj == null)
+			return false;
+		if(obj.getClass() != this.getClass())
+			return false;
+		return (this.id.equals(((Usuario)obj).getId()));
+	}	
 
 	/**
 	 * @return the imagen
