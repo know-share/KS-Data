@@ -8,7 +8,7 @@ import com.knowshare.entities.idea.Idea;
 /**
  * Una {@link Idea} debe ser de cualquiera de estos 
  * tipos. 
- * @author miguel
+ * @author Miguel Montañez
  *
  */
 public enum TipoIdeaEnum {

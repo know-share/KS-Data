@@ -77,10 +77,10 @@ public class InfoUsuario implements Serializable{
 	 */
 	@Override
 	public int hashCode() {
-		final int PRIME = 31;
+		final int prime = 31;
 		int result = 1;
-		result = PRIME * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = PRIME * result + ((username == null) ? 0 : username.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
