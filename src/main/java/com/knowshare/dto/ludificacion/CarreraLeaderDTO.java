@@ -1,16 +1,17 @@
 package com.knowshare.dto.ludificacion;
 
+/**
+ * Representa la carrera que se muestra en el leaderboard.
+ * @author Felipe Bautista
+ *
+ */
 public class CarreraLeaderDTO {
 
 	private String id;
+	
 	private String carrera;
+	
 	private int cantidad;
-	
-	
-	public CarreraLeaderDTO() {
-		
-	}
-
 
 	/**
 	 * @return the id
@@ -19,14 +20,12 @@ public class CarreraLeaderDTO {
 		return id;
 	}
 
-
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
-
 
 	/**
 	 * @return the carrera
@@ -35,14 +34,12 @@ public class CarreraLeaderDTO {
 		return carrera;
 	}
 
-
 	/**
 	 * @param carrera the carrera to set
 	 */
 	public void setCarrera(String carrera) {
 		this.carrera = carrera;
 	}
-
 
 	/**
 	 * @return the cantidad
@@ -51,14 +48,10 @@ public class CarreraLeaderDTO {
 		return cantidad;
 	}
 
-
 	/**
 	 * @param cantidad the cantidad to set
 	 */
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	
-	
-	
 }
