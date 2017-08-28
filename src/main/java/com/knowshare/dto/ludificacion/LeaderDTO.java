@@ -5,13 +5,17 @@ package com.knowshare.dto.ludificacion;
  * @author Felipe Bautista
  *
  */
-public class CarreraLeaderDTO {
+public class LeaderDTO {
 
 	private String id;
 	
-	private String carrera;
+	private String nombre;
 	
 	private int cantidad;
+	
+	private String aval;
+	
+	private int pos = 0;
 
 	/**
 	 * @return the id
@@ -30,15 +34,15 @@ public class CarreraLeaderDTO {
 	/**
 	 * @return the carrera
 	 */
-	public String getCarrera() {
-		return carrera;
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
 	 * @param carrera the carrera to set
 	 */
-	public void setCarrera(String carrera) {
-		this.carrera = carrera;
+	public void setNombre(String carrera) {
+		this.nombre = carrera;
 	}
 
 	/**
@@ -54,4 +58,34 @@ public class CarreraLeaderDTO {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+
+	/**
+	 * @return the aval
+	 */
+	public String getAval() {
+		return aval;
+	}
+
+	/**
+	 * @param aval the aval to set
+	 */
+	public void setAval(String aval) {
+		this.aval = aval;
+	}
+
+	/**
+	 * @return the pos
+	 */
+	public int getPos() {
+		return pos;
+	}
+
+	/**
+	 * @param pos the pos to set
+	 */
+	public void setPos(int pos) {
+		this.pos = pos;
+	}
+	
+	
 }
