@@ -27,8 +27,9 @@ public class LeaderDTO {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(String id) {
+	public LeaderDTO setId(String id) {
 		this.id = id;
+		return this;
 	}
 
 	/**
@@ -41,8 +42,9 @@ public class LeaderDTO {
 	/**
 	 * @param carrera the carrera to set
 	 */
-	public void setNombre(String carrera) {
+	public LeaderDTO setNombre(String carrera) {
 		this.nombre = carrera;
+		return this;
 	}
 
 	/**
@@ -55,8 +57,9 @@ public class LeaderDTO {
 	/**
 	 * @param cantidad the cantidad to set
 	 */
-	public void setCantidad(int cantidad) {
+	public LeaderDTO setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+		return this;
 	}
 
 	/**
@@ -69,8 +72,9 @@ public class LeaderDTO {
 	/**
 	 * @param aval the aval to set
 	 */
-	public void setAval(String aval) {
+	public LeaderDTO setAval(String aval) {
 		this.aval = aval;
+		return this;
 	}
 
 	/**
@@ -83,9 +87,8 @@ public class LeaderDTO {
 	/**
 	 * @param pos the pos to set
 	 */
-	public void setPos(int pos) {
+	public LeaderDTO setPos(int pos) {
 		this.pos = pos;
+		return this;
 	}
-	
-	
 }

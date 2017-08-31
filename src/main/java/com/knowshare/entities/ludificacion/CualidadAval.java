@@ -19,6 +19,8 @@ public class CualidadAval{
 	@DBRef
 	private Cualidad cualidad;
 	
+	private String nombre;
+	
 	private Integer cantidad;
 
 	/**
@@ -48,6 +50,21 @@ public class CualidadAval{
 	 */
 	public CualidadAval setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
+		return this;
+	}
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public CualidadAval setNombre(String nombre) {
+		this.nombre = nombre;
 		return this;
 	}
 }
