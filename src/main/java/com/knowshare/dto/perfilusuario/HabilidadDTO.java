@@ -121,7 +121,8 @@ public class HabilidadDTO implements Serializable{
 	/**
 	 * @param idCarrera the idCarrera to set
 	 */
-	public void setIdCarrera(String idCarrera) {
+	public HabilidadDTO setIdCarrera(String idCarrera) {
 		this.idCarrera = idCarrera;
+		return this;
 	}
 }
