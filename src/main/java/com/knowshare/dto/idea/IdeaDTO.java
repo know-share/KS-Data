@@ -94,8 +94,9 @@ public class IdeaDTO {
 	/**
 	 * @param compartida the compartida to set
 	 */
-	public void setCompartida(boolean compartida) {
+	public IdeaDTO setCompartida(boolean compartida) {
 		this.compartida = compartida;
+		return this;
 	}
 
 	/**

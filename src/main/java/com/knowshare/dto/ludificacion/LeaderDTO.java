@@ -9,6 +9,8 @@ public class LeaderDTO {
 
 	private String id;
 	
+	private String username;
+	
 	private String nombre;
 	
 	private int cantidad;
@@ -89,6 +91,21 @@ public class LeaderDTO {
 	 */
 	public LeaderDTO setPos(int pos) {
 		this.pos = pos;
+		return this;
+	}
+
+	/**
+	 * @return the username
+	 */
+	public String getUsername() {
+		return username;
+	}
+
+	/**
+	 * @param username the username to set
+	 */
+	public LeaderDTO setUsername(String username) {
+		this.username = username;
 		return this;
 	}
 }
