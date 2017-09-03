@@ -9,6 +9,7 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 import com.knowshare.dto.academia.CarreraDTO;
+import com.knowshare.dto.ludificacion.InsigniaDTO;
 import com.knowshare.entities.academia.AreaConocimiento;
 import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
@@ -49,6 +50,8 @@ public class UsuarioDTO implements Serializable{
 	
 	private String grupoInvestigacion;
 	
+	private Boolean disponible;
+	
 	private TipoUsuariosEnum tipoUsuario;
 	
 	private CarreraDTO carrera;
@@ -85,7 +88,7 @@ public class UsuarioDTO implements Serializable{
 	
 	private List<InfoUsuario> siguiendo;
 	
-	private List<String> insignias;
+	private List<InsigniaDTO> insignias;
 	
 	private List<String> solicitudesAmistad;
 	
@@ -115,6 +118,21 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public String getNombre() {
 		return nombre;
+	}
+	
+	/**
+	 * @return the disponible
+	 */
+	public Boolean isDisponible() {
+		return disponible;
+	}
+
+	/**
+	 * @param disponible the disponible to set
+	 */
+	public UsuarioDTO setDisponible(Boolean disponible) {
+		this.disponible = disponible;
+		return this;
 	}
 
 	/**
@@ -443,14 +461,14 @@ public class UsuarioDTO implements Serializable{
 	/**
 	 * @return the insignias
 	 */
-	public List<String> getInsignias() {
+	public List<InsigniaDTO> getInsignias() {
 		return insignias;
 	}
 
 	/**
 	 * @param insignias the insignias to set
 	 */
-	public UsuarioDTO setInsignias(List<String> insignias) {
+	public UsuarioDTO setInsignias(List<InsigniaDTO> insignias) {
 		this.insignias = insignias;
 		return this;
 	}

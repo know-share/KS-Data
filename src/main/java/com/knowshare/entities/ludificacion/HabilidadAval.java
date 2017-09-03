@@ -19,6 +19,8 @@ public class HabilidadAval {
 	@DBRef
 	private Habilidad habilidad;
 	
+	private String nombre;
+	
 	private Integer cantidad;
 
 	/**
@@ -48,6 +50,21 @@ public class HabilidadAval {
 	 */
 	public HabilidadAval setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
+		return this;
+	}
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public HabilidadAval setNombre(String nombre) {
+		this.nombre = nombre;
 		return this;
 	}
 }

@@ -1,25 +1,30 @@
 /**
  * 
  */
-package com.knowshare.entities.ludificacion;
+package com.knowshare.dto.ludificacion;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import java.io.Serializable;
 
 /**
- * Representa las insignias que se otorgan en la aplicacion.
+ * Contiene atributos necesarios para mandar al cliente
+ * y poder mostrar por pantalla.
  * @author Miguel Montañez
  *
  */
-@Document(collection = "insignia")
-public class Insignia {
+public class InsigniaDTO implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	@Id
 	private String id;
 	
 	private String nombre;
 	
 	private String descripcion;
+	
+	private boolean visto;
 	
 	private String iconoRef;
 
@@ -33,7 +38,7 @@ public class Insignia {
 	/**
 	 * @param id the id to set
 	 */
-	public Insignia setId(String id) {
+	public InsigniaDTO setId(String id) {
 		this.id = id;
 		return this;
 	}
@@ -48,7 +53,7 @@ public class Insignia {
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public Insignia setNombre(String nombre) {
+	public InsigniaDTO setNombre(String nombre) {
 		this.nombre = nombre;
 		return this;
 	}
@@ -63,8 +68,23 @@ public class Insignia {
 	/**
 	 * @param descripcion the descripcion to set
 	 */
-	public Insignia setDescripcion(String descripcion) {
+	public InsigniaDTO setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+		return this;
+	}
+
+	/**
+	 * @return the visto
+	 */
+	public boolean isVisto() {
+		return visto;
+	}
+
+	/**
+	 * @param visto the visto to set
+	 */
+	public InsigniaDTO setVisto(boolean visto) {
+		this.visto = visto;
 		return this;
 	}
 
@@ -78,7 +98,7 @@ public class Insignia {
 	/**
 	 * @param iconoRef the iconoRef to set
 	 */
-	public Insignia setIconoRef(String iconoRef) {
+	public InsigniaDTO setIconoRef(String iconoRef) {
 		this.iconoRef = iconoRef;
 		return this;
 	}

@@ -19,7 +19,7 @@ import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.app.PreferenciasUsuario;
 import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
-import com.knowshare.entities.ludificacion.Insignia;
+import com.knowshare.entities.ludificacion.InsigniaPreview;
 import com.knowshare.entities.ludificacion.UsuarioAval;
 import com.knowshare.enums.TipoProfesorEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
@@ -49,7 +49,7 @@ public class Usuario{
 	@Indexed(unique=true)
 	private String correo;
 	
-	private Date fechaNacimiento;
+	private Date fechaRegistro;
 	
 	private TipoUsuariosEnum tipo;
 	
@@ -57,7 +57,7 @@ public class Usuario{
 	
 	private TipoProfesorEnum tipoProfesor;
 	
-	private String disponibilidad;
+	private Boolean disponible;
 	
 	private String estado;
 	
@@ -83,8 +83,7 @@ public class Usuario{
 	
 	private List<CualidadAval> cualidadesProfesor;
 	
-	@DBRef
-	private List<Insignia> insignias;
+	private List<InsigniaPreview> insignias;
 	
 	@DBRef(lazy = true)
 	private List<TrabajoGrado> trabajosGrado;
@@ -185,15 +184,15 @@ public class Usuario{
 	/**
 	 * @return the fechaNacimiento
 	 */
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+	public Date getFechaRegistro() {
+		return fechaRegistro;
 	}
 
 	/**
 	 * @param fechaNacimiento the fechaNacimiento to set
 	 */
-	public Usuario setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public Usuario setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
 		return this;
 	}
 
@@ -245,15 +244,15 @@ public class Usuario{
 	/**
 	 * @return the disponibilidad
 	 */
-	public String getDisponibilidad() {
-		return disponibilidad;
+	public Boolean isDisponible() {
+		return disponible;
 	}
 
 	/**
 	 * @param disponibilidad the disponibilidad to set
 	 */
-	public Usuario setDisponibilidad(String disponibilidad) {
-		this.disponibilidad = disponibilidad;
+	public Usuario setDisponible(Boolean disponible) {
+		this.disponible = disponible;
 		return this;
 	}
 
@@ -395,14 +394,14 @@ public class Usuario{
 	/**
 	 * @return the insignias
 	 */
-	public List<Insignia> getInsignias() {
+	public List<InsigniaPreview> getInsignias() {
 		return insignias;
 	}
 
 	/**
 	 * @param insignias the insignias to set
 	 */
-	public Usuario setInsignias(List<Insignia> insignias) {
+	public Usuario setInsignias(List<InsigniaPreview> insignias) {
 		this.insignias = insignias;
 		return this;
 	}
@@ -577,8 +576,12 @@ public class Usuario{
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return (obj != null && this.id.equals(((Usuario)obj).getId()));
-	}
+		if(obj == null)
+			return false;
+		if(obj.getClass() != this.getClass())
+			return false;
+		return (this.id.equals(((Usuario)obj).getId()));
+	}	
 
 	/**
 	 * @return the imagen
