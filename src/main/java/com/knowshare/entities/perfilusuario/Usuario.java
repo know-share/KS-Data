@@ -17,6 +17,7 @@ import com.knowshare.entities.academia.Carrera;
 import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.app.PreferenciasUsuario;
+import com.knowshare.entities.idea.Tag;
 import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.entities.ludificacion.InsigniaPreview;
@@ -105,6 +106,9 @@ public class Usuario{
 	private PreferenciasUsuario preferencias;
 	
 	private ImageProfile imagen;
+	
+	@DBRef(lazy = true)
+	private List<Tag> preferenciaIdeas;
 
 	/**
 	 * @return the id
@@ -568,6 +572,21 @@ public class Usuario{
 	 */
 	public Usuario setGenero(String genero) {
 		this.genero = genero;
+		return this;
+	}
+
+	/**
+	 * @return the preferenciaIdeas
+	 */
+	public List<Tag> getPreferenciaIdeas() {
+		return preferenciaIdeas;
+	}
+
+	/**
+	 * @param preferenciaIdeas the preferenciaIdeas to set
+	 */
+	public Usuario setPreferenciaIdeas(List<Tag> preferenciaIdeas) {
+		this.preferenciaIdeas = preferenciaIdeas;
 		return this;
 	}
 
