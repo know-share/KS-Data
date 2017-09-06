@@ -22,7 +22,6 @@ import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.entities.ludificacion.InsigniaPreview;
 import com.knowshare.entities.ludificacion.UsuarioAval;
-import com.knowshare.enums.TipoProfesorEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
 
 /**
@@ -55,8 +54,6 @@ public class Usuario{
 	private TipoUsuariosEnum tipo;
 	
 	private String grupoInvestigacion;
-	
-	private TipoProfesorEnum tipoProfesor;
 	
 	private Boolean disponible;
 	
@@ -227,21 +224,6 @@ public class Usuario{
 	 */
 	public Usuario setGrupoInvestigacion(String grupoInvestigacion) {
 		this.grupoInvestigacion = grupoInvestigacion;
-		return this;
-	}
-
-	/**
-	 * @return the tipoProfesor
-	 */
-	public TipoProfesorEnum getTipoProfesor() {
-		return tipoProfesor;
-	}
-
-	/**
-	 * @param tipoProfesor the tipoProfesor to set
-	 */
-	public Usuario setTipoProfesor(TipoProfesorEnum tipoProfesor) {
-		this.tipoProfesor = tipoProfesor;
 		return this;
 	}
 
