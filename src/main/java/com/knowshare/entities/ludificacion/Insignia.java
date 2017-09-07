@@ -20,8 +20,6 @@ public class Insignia {
 	private String nombre;
 	
 	private String descripcion;
-	
-	private String iconoRef;
 
 	/**
 	 * @return the id
@@ -65,21 +63,6 @@ public class Insignia {
 	 */
 	public Insignia setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-		return this;
-	}
-
-	/**
-	 * @return the iconoRef
-	 */
-	public String getIconoRef() {
-		return iconoRef;
-	}
-
-	/**
-	 * @param iconoRef the iconoRef to set
-	 */
-	public Insignia setIconoRef(String iconoRef) {
-		this.iconoRef = iconoRef;
 		return this;
 	}
 }
