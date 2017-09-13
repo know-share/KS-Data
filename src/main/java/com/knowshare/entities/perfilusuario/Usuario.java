@@ -5,6 +5,7 @@ package com.knowshare.entities.perfilusuario;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -17,7 +18,6 @@ import com.knowshare.entities.academia.Carrera;
 import com.knowshare.entities.academia.FormacionAcademica;
 import com.knowshare.entities.academia.TrabajoGrado;
 import com.knowshare.entities.app.PreferenciasUsuario;
-import com.knowshare.entities.idea.Tag;
 import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.entities.ludificacion.InsigniaPreview;
@@ -104,8 +104,8 @@ public class Usuario{
 	
 	private ImageProfile imagen;
 	
-	@DBRef(lazy = true)
-	private List<Tag> preferenciaIdeas;
+	// Key: id of tag and value: number of times 
+	private Map<String,Integer> preferenciaIdeas;
 
 	/**
 	 * @return the id
@@ -560,14 +560,14 @@ public class Usuario{
 	/**
 	 * @return the preferenciaIdeas
 	 */
-	public List<Tag> getPreferenciaIdeas() {
+	public Map<String,Integer> getPreferenciaIdeas() {
 		return preferenciaIdeas;
 	}
 
 	/**
 	 * @param preferenciaIdeas the preferenciaIdeas to set
 	 */
-	public Usuario setPreferenciaIdeas(List<Tag> preferenciaIdeas) {
+	public Usuario setPreferenciaIdeas(Map<String,Integer> preferenciaIdeas) {
 		this.preferenciaIdeas = preferenciaIdeas;
 		return this;
 	}
