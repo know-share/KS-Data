@@ -3,6 +3,8 @@
  */
 package com.knowshare.entities.idea;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,8 +15,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection="tag")
-public class Tag {
+public class Tag implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String id;
 	

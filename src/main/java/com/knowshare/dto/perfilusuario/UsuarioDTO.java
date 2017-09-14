@@ -5,6 +5,7 @@ package com.knowshare.dto.perfilusuario;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 
@@ -95,6 +96,8 @@ public class UsuarioDTO implements Serializable{
 	private List<TrabajoGrado> tgDirigidos;
 	
 	private List<FormacionAcademica> formacionAcademica;
+	
+	private Map<String,Integer> preferenciaIdeasTag;
 	
 	private Boolean imagen;
 	
@@ -575,6 +578,21 @@ public class UsuarioDTO implements Serializable{
 	 */
 	public UsuarioDTO setImagen(Boolean imagen) {
 		this.imagen = imagen;
+		return this;
+	}
+
+	/**
+	 * @return the preferenciaIdeas
+	 */
+	public Map<String,Integer> getPreferenciaIdeasTag() {
+		return preferenciaIdeasTag;
+	}
+
+	/**
+	 * @param preferenciaIdeas the preferenciaIdeas to set
+	 */
+	public UsuarioDTO setPreferenciaIdeasTag(Map<String,Integer> preferenciaIdeasTag) {
+		this.preferenciaIdeasTag = preferenciaIdeasTag;
 		return this;
 	}
 }
