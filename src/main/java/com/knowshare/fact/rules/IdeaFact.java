@@ -4,13 +4,18 @@
 package com.knowshare.fact.rules;
 
 /**
- * @author Pablo
+ * Entidad que el motor de reglas reconoce y hace uso
+ * para leer la información y poder aplicar la regla de
+ * recomendación de ideas.
+ * @author Pablo Gaitan
  *
  */
 public class IdeaFact {
 	
 	private String idIdea;
+	
 	private Double distancia;
+	
 	private Boolean arriba;
 	
 	public IdeaFact(String id , Double dist,Boolean b){
@@ -62,6 +67,4 @@ public class IdeaFact {
 	public void setDistancia(Double distancia) {
 		this.distancia = distancia;
 	}
-	
-	
 }

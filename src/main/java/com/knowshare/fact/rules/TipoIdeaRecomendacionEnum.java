@@ -4,7 +4,9 @@
 package com.knowshare.fact.rules;
 
 /**
- * @author Pablo
+ * Tipos de distancias que una idea tiene frente
+ * a un usuario.
+ * @author Pablo Gaitan
  *
  */
 public enum TipoIdeaRecomendacionEnum {
