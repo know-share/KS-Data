@@ -18,12 +18,35 @@ public class IdeaFact {
 	
 	private Boolean arriba;
 	
-	public IdeaFact(String id , Double dist,Boolean b){
+	private Boolean recoBusqueda;
+	
+	public IdeaFact(String id , Double dist,Boolean b,Boolean reco){
 		idIdea = id;
 		distancia = dist;
 		arriba = b;
+		recoBusqueda = reco;
 	}
 	
+	
+	
+	/**
+	 * @return the recoBusqueda
+	 */
+	public Boolean getRecoBusqueda() {
+		return recoBusqueda;
+	}
+
+
+
+	/**
+	 * @param recoBusqueda the recoBusqueda to set
+	 */
+	public void setRecoBusqueda(Boolean recoBusqueda) {
+		this.recoBusqueda = recoBusqueda;
+	}
+
+
+
 	/**
 	 * @return the arriba
 	 */
