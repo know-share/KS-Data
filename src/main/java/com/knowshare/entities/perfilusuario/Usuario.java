@@ -5,6 +5,7 @@ package com.knowshare.entities.perfilusuario;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -21,7 +22,6 @@ import com.knowshare.entities.ludificacion.CualidadAval;
 import com.knowshare.entities.ludificacion.HabilidadAval;
 import com.knowshare.entities.ludificacion.InsigniaPreview;
 import com.knowshare.entities.ludificacion.UsuarioAval;
-import com.knowshare.enums.TipoProfesorEnum;
 import com.knowshare.enums.TipoUsuariosEnum;
 
 /**
@@ -54,8 +54,6 @@ public class Usuario{
 	private TipoUsuariosEnum tipo;
 	
 	private String grupoInvestigacion;
-	
-	private TipoProfesorEnum tipoProfesor;
 	
 	private Boolean disponible;
 	
@@ -105,6 +103,9 @@ public class Usuario{
 	private PreferenciasUsuario preferencias;
 	
 	private ImageProfile imagen;
+	
+	// Key: id of tag and value: number of times 
+	private Map<String,Integer> preferenciaIdeas;
 
 	/**
 	 * @return the id
@@ -223,21 +224,6 @@ public class Usuario{
 	 */
 	public Usuario setGrupoInvestigacion(String grupoInvestigacion) {
 		this.grupoInvestigacion = grupoInvestigacion;
-		return this;
-	}
-
-	/**
-	 * @return the tipoProfesor
-	 */
-	public TipoProfesorEnum getTipoProfesor() {
-		return tipoProfesor;
-	}
-
-	/**
-	 * @param tipoProfesor the tipoProfesor to set
-	 */
-	public Usuario setTipoProfesor(TipoProfesorEnum tipoProfesor) {
-		this.tipoProfesor = tipoProfesor;
 		return this;
 	}
 
@@ -568,6 +554,21 @@ public class Usuario{
 	 */
 	public Usuario setGenero(String genero) {
 		this.genero = genero;
+		return this;
+	}
+
+	/**
+	 * @return the preferenciaIdeas
+	 */
+	public Map<String,Integer> getPreferenciaIdeas() {
+		return preferenciaIdeas;
+	}
+
+	/**
+	 * @param preferenciaIdeas the preferenciaIdeas to set
+	 */
+	public Usuario setPreferenciaIdeas(Map<String,Integer> preferenciaIdeas) {
+		this.preferenciaIdeas = preferenciaIdeas;
 		return this;
 	}
 

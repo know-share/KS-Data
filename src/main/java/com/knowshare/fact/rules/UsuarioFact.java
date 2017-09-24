@@ -5,7 +5,8 @@ package com.knowshare.fact.rules;
 
 /**
  * Entidad que el motor de reglas reconoce y hace uso
- * para leer la información y poder aplicar la regla.
+ * para leer la información y poder aplicar la regla de
+ * recomendación de usuarios.
  * @author Miguel Montañez
  *
  */

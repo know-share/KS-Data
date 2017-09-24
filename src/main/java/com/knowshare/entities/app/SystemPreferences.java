@@ -13,9 +13,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="system_preferences")
 public class SystemPreferences {
 
-	// actua como un bit 1 = on, 0 = off
 	private String id;
-	
+
+	// actua como un bit 1 = on, 0 = off	
 	private short rules;
 
 	/**

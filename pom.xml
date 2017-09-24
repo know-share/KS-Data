@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.knowshare.data</groupId>
 	<artifactId>KS-Data</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
