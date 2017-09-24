@@ -27,16 +27,12 @@ public class IdeaFact {
 		recoBusqueda = reco;
 	}
 	
-	
-	
 	/**
 	 * @return the recoBusqueda
 	 */
 	public Boolean getRecoBusqueda() {
 		return recoBusqueda;
 	}
-
-
 
 	/**
 	 * @param recoBusqueda the recoBusqueda to set
@@ -45,8 +41,6 @@ public class IdeaFact {
 		this.recoBusqueda = recoBusqueda;
 	}
 
-
-
 	/**
 	 * @return the arriba
 	 */
@@ -54,14 +48,12 @@ public class IdeaFact {
 		return arriba;
 	}
 
-
 	/**
 	 * @param arriba the arriba to set
 	 */
 	public void setArriba(Boolean arriba) {
 		this.arriba = arriba;
 	}
-
 
 	/**
 	 * @return the idIdea
