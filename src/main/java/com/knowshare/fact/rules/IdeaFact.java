@@ -16,11 +16,11 @@ public class IdeaFact {
 	
 	private Double distancia;
 	
-	private Boolean arriba;
+	private boolean arriba;
 	
-	private Boolean recoBusqueda;
+	private boolean recoBusqueda;
 	
-	public IdeaFact(String id , Double dist,Boolean b,Boolean reco){
+	public IdeaFact(String id , Double dist,boolean b,boolean reco){
 		idIdea = id;
 		distancia = dist;
 		arriba = b;
@@ -28,31 +28,31 @@ public class IdeaFact {
 	}
 	
 	/**
-	 * @return the recoBusqueda
-	 */
-	public Boolean getRecoBusqueda() {
-		return recoBusqueda;
-	}
-
-	/**
-	 * @param recoBusqueda the recoBusqueda to set
-	 */
-	public void setRecoBusqueda(Boolean recoBusqueda) {
-		this.recoBusqueda = recoBusqueda;
-	}
-
-	/**
 	 * @return the arriba
 	 */
-	public Boolean getArriba() {
+	public boolean isArriba() {
 		return arriba;
 	}
 
 	/**
 	 * @param arriba the arriba to set
 	 */
-	public void setArriba(Boolean arriba) {
+	public void setArriba(boolean arriba) {
 		this.arriba = arriba;
+	}
+
+	/**
+	 * @return the recoBusqueda
+	 */
+	public boolean isRecoBusqueda() {
+		return recoBusqueda;
+	}
+
+	/**
+	 * @param recoBusqueda the recoBusqueda to set
+	 */
+	public void setRecoBusqueda(boolean recoBusqueda) {
+		this.recoBusqueda = recoBusqueda;
 	}
 
 	/**
