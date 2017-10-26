@@ -62,7 +62,7 @@ public class Idea {
 	
 	private String usuarioOriginal;
 	
-	@DBRef
+	@DBRef(lazy = true)
 	private TrabajoGrado tg;
 	
 	

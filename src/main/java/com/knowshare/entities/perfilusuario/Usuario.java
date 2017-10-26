@@ -63,7 +63,7 @@ public class Usuario{
 	
 	private List<FormacionAcademica> formacionesAcademicas;
 	
-	@DBRef
+	@DBRef(lazy = true)
 	private List<Gusto> gustos;
 	
 	private List<HabilidadAval> habilidades;
