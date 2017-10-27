@@ -19,15 +19,15 @@ import com.knowshare.enums.TipoAvalEnum;
  */
 public class UsuarioAval{
 	
-	@DBRef
+	@DBRef(lazy = true)
 	private Usuario usuario;
 	
 	private TipoAvalEnum tipo;
 	
-	@DBRef
+	@DBRef(lazy = true)
 	private Cualidad cualidad;
 	
-	@DBRef
+	@DBRef(lazy = true)
 	private Habilidad habilidad;
 
 	/**
