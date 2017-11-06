@@ -1,0 +1,12 @@
+com.knowshare.dto.academia
+com.knowshare.dto.idea
+com.knowshare.dto.ludificacion
+com.knowshare.dto.perfilusuario
+com.knowshare.dto.rules
+com.knowshare.entities.academia
+com.knowshare.entities.app
+com.knowshare.entities.idea
+com.knowshare.entities.ludificacion
+com.knowshare.entities.perfilusuario
+com.knowshare.enums
+com.knowshare.fact.rules

@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/HP/.m2/repository/org/springframework/spring-beans/4.3.8.RELEASE/spring-beans-4.3.8.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/spring-context/4.3.8.RELEASE/spring-context-4.3.8.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/spring-tx/4.3.8.RELEASE/spring-tx-4.3.8.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/spring-expression/4.3.8.RELEASE/spring-expression-4.3.8.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/data/spring-data-mongodb/1.10.3.RELEASE/spring-data-mongodb-1.10.3.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar;C:/Users/HP/.m2/repository/org/springframework/spring-core/4.3.8.RELEASE/spring-core-4.3.8.RELEASE.jar;C:/Users/HP/.m2/repository/org/mongodb/mongo-java-driver/3.4.2/mongo-java-driver-3.4.2.jar;C:/Users/HP/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar;C:/Users/HP/.m2/repository/org/springframework/spring-aop/4.3.8.RELEASE/spring-aop-4.3.8.RELEASE.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/HP/Desktop/Know&Share/KS-Data/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017 <a href="http://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/HP/Desktop/Know&Share/KS-Data/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'KS-Data 1.0.2 API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' 'C:/Users/HP/Desktop/Know&Share/KS-Data/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'KS-Data 1.0.2 API'
